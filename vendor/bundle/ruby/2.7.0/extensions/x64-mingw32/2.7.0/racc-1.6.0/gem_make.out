@@ -1,0 +1,21 @@
+current directory: C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/racc-1.6.0/ext/racc/cparse
+C:/Ruby27-x64/bin/ruby.exe -I C:/Ruby27-x64/lib/ruby/2.7.0 -r ./siteconf20220114-29188-1r8ry4a.rb extconf.rb
+checking for rb_block_call()... yes
+checking for rb_ary_subseq()... yes
+creating Makefile
+
+current directory: C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/racc-1.6.0/ext/racc/cparse
+make "DESTDIR=" clean
+bash.exe: warning: could not find /tmp, please create!
+
+current directory: C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/racc-1.6.0/ext/racc/cparse
+make "DESTDIR="
+generating cparse-x64-mingw32.def
+bash.exe: warning: could not find /tmp, please create!
+compiling cparse.c
+linking shared-object racc/cparse.so
+
+current directory: C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/racc-1.6.0/ext/racc/cparse
+make "DESTDIR=" install
+bash.exe: warning: could not find /tmp, please create!
+/usr/bin/install -c -m 0755 cparse.so ./.gem.20220114-29188-n5o3o/racc

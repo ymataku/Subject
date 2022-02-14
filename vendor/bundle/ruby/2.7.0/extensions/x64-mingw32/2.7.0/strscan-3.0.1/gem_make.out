@@ -1,0 +1,17 @@
+current directory: C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/strscan-3.0.1/ext/strscan
+C:/Ruby27-x64/bin/ruby.exe -I C:/Ruby27-x64/lib/ruby/2.7.0 -r ./siteconf20220114-29188-18k99zf.rb extconf.rb
+checking for onig_region_memsize() in ruby.h... yes
+creating Makefile
+
+current directory: C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/strscan-3.0.1/ext/strscan
+make "DESTDIR=" clean
+
+current directory: C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/strscan-3.0.1/ext/strscan
+make "DESTDIR="
+generating strscan-x64-mingw32.def
+compiling strscan.c
+linking shared-object strscan.so
+
+current directory: C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/strscan-3.0.1/ext/strscan
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 strscan.so ./.gem.20220114-29188-1t8i8lw

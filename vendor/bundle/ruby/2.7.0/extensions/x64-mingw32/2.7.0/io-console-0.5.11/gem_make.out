@@ -1,0 +1,18 @@
+current directory: C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/io-console-0.5.11/ext/io/console
+C:/Ruby27-x64/bin/ruby.exe -I C:/Ruby27-x64/lib/ruby/2.7.0 -r ./siteconf20220114-14084-1i7bl51.rb extconf.rb
+checking for HAVE_RUBY_FIBER_SCHEDULER_H... no
+checking for rb_scheduler_timeout()... no
+creating Makefile
+
+current directory: C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/io-console-0.5.11/ext/io/console
+make "DESTDIR=" clean
+
+current directory: C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/io-console-0.5.11/ext/io/console
+make "DESTDIR="
+generating console-x64-mingw32.def
+compiling console.c
+linking shared-object io/console.so
+
+current directory: C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/io-console-0.5.11/ext/io/console
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 console.so ./.gem.20220114-14084-y91nbi/io

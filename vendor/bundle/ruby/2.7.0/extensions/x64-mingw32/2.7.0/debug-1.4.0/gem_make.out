@@ -1,0 +1,17 @@
+current directory: C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/debug-1.4.0/ext/debug
+C:/Ruby27-x64/bin/ruby.exe -I C:/Ruby27-x64/lib/ruby/2.7.0 -r ./siteconf20220114-14084-mcsl64.rb extconf.rb
+creating Makefile
+
+current directory: C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/debug-1.4.0/ext/debug
+make "DESTDIR=" clean
+
+current directory: C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/debug-1.4.0/ext/debug
+make "DESTDIR="
+generating debug-x64-mingw32.def
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.so
+
+current directory: C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/debug-1.4.0/ext/debug
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 debug.so ./.gem.20220114-14084-8wn0be/debug
