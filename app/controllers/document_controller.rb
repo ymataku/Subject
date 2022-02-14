@@ -12,11 +12,7 @@ class DocumentController < ApplicationController
   def new
     @document = Document.new
     @query = params[:content]
-    
-    
-    
     if @query.present?
-      print("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
       print(@query)
     end
 
