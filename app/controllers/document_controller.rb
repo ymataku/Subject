@@ -1,33 +1,29 @@
 class DocumentController < ApplicationController
   before_action:authenticate_user!
-  
   def index
-    # @document = Document.all
     @query = params[:content]
-    @hello = "ちんちん"
-    @document = Document.all
-    
+    @document = Document.where(subjectname:@query)
+  end
+
+  def show
+    @document = Document.find(params[:id])
   end
 
   def new
     @document = Document.new
     @query = params[:content]
-    
-    
-    
     if @query.present?
-      print("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
       print(@query)
     end
-
   end
 
   def create
     @document = Document.create(document_params)
+    @pamams = params[:content]
     if document_params.present?
       print(document_params)
     end
-    redirect_to document_index_path,notice:"作成しました."
+    redirect_to document_path(@document),notice:"作成しました."
   end
 
   private

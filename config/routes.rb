@@ -9,13 +9,18 @@ Rails.application.routes.draw do
   # get 'subject/show'
   # get 'home/index'
   devise_for :users
+
+  devise_scope :user do
+    get '/users/sign_out' => 'devise/sessions#destroy'
+  end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-  resources :user, only: [:show]
+  resources :user, only: [:show] 
+  # get  '/user/:id' ,to: 'user#show',as: 'user'
   
   # Defines the root path route ("/")
   # root "articles#index"
   resources:subject
-  resources:document,only:[:index,:show,:new]
+  resources:document,only:[:index,:show,:new] 
 
   # get 'document/index/'
   post "document/new" => "document#create"
