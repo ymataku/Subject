@@ -4,6 +4,7 @@ class SubjectController < ApplicationController
   def index
     @subject = Subject.all
   end
+  
 
   def show
     @subject = Subject.find(params[:id])
@@ -17,7 +18,6 @@ class SubjectController < ApplicationController
     @subject = Subject.create(subject_params)
     # redirect_to subject_path(@subject),notice:"作成しました."
     redirect_to document_new_path(content:@subject.subjectname),notice:"作成しました."
-
   end
 
   def edit
