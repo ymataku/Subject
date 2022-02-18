@@ -1,5 +1,6 @@
 
 <%= form_for @subjects,url:subject_index_path do |f|%>
+    <%= f.hidden_field :username,:value => current_user.name %>
     <div class = "field">
         <%=f.label:subjectname,class:"label"%>
         <%=f.text_field:subjectname,class:"input"%>

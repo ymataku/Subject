@@ -1,6 +1,6 @@
 
 <%= form_for @document,url:document_new_path do |f|%>
-   
+    <%= f.hidden_field :username,:value => current_user.name %>
     <%= f.hidden_field :subjectname,:value => @query %>
     <div class="field">
         <%= f.label:"タイトル",class:"label"%>

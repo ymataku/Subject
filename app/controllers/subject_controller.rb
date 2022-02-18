@@ -2,7 +2,11 @@ class SubjectController < ApplicationController
   before_action:authenticate_user!
 
   def index
-    @subject = Subject.all
+    print("this is current user name")
+    # print(current_user.name)
+    print(current_user.name)
+    @subject = Subject.where(username:current_user.name)
+    
   end
   
 
@@ -29,7 +33,7 @@ class SubjectController < ApplicationController
 
   private
   def subject_params
-    params.require(:subject).permit(:subjectname,:test)
+    params.require(:subject).permit(:username,:subjectname,:test)
     
   end
 

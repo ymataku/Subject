@@ -1,8 +1,9 @@
 class DocumentController < ApplicationController
   before_action:authenticate_user!
   def index
-    @query = params[:content]
-    @document = Document.where(subjectname:@query)
+    print("this is current user name")
+    print(current_user.name)
+    @document = Document.where(username:current_user.name).and(Document.where(subjectname: params[:content]))
   end
 
   def show
@@ -28,6 +29,6 @@ class DocumentController < ApplicationController
 
   private
   def document_params
-    params.require(:document).permit(:subjectname,:title,:content,:difficulty)
+    params.require(:document).permit(:username,:subjectname,:title,:content,:difficulty)
   end
 end
