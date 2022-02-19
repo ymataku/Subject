@@ -1,18 +1,30 @@
 
-<%= form_for @document,url:document_new_path do |f|%>
-   
-    <%= f.hidden_field :subjectname,:value => @query %>
-    <div class="field">
-        <%= f.label:"タイトル",class:"label"%>
-        <%= f.text_field:title,class:"input"%>
-    </div>
-    <div class="field">
-        <%= f.label:"内容",class:"label"%>
-        <%= f.text_area:content,class:"input"%>
-    </div>
-    <div class="field">
-        <%= f.label:"難易度",class:"label"%>
-        <%= f.number_field:difficulty,min:1,max:5%>
-    </div>
-    <%=f.submit%>
-<%end%>
+<section class="hero is-success">
+<div class="hero-body">
+  <p class="title">
+    資料作成
+  </p>
+  <p class="subtitle">
+    作成する資料の情報を入力してください。
+  </p>
+</div>
+</section>
+<section class="container">
+    <%= form_for @document,url:document_new_path do |f|%>
+        <%= f.hidden_field :username,:value => current_user.name %>
+        <%= f.hidden_field :subjectname,:value => @query %>
+        <div class="field">
+            <%= f.label:"タイトル",class:"label"%>
+            <%= f.text_field:title,class:"input"%>
+        </div>
+        <div class="field">
+            <%= f.label:"内容",class:"label"%>
+            <%= f.text_area:content,class:"textarea",placeholder:"10 lines of textarea",rows:"10"%>
+        </div>
+        <div class="field">
+            <%= f.label:"難易度",class:"label"%>
+            <%= f.number_field:difficulty,min:1,max:5%>
+        </div>
+        <%=f.submit%>
+    <%end%>
+</section>

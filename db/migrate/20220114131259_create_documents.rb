@@ -5,7 +5,7 @@ class CreateDocuments < ActiveRecord::Migration[7.0]
       t.string :title
       t.text :content
       t.integer :difficulty
-          
+      t.string :username
       t.timestamps
     end
   end

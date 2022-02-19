@@ -1,8 +1,10 @@
 <h1>Document#index</h1>
 <p>Find me in app/views/document/index.html.erb</p>
 
-<%= link_to @query,:controller => 'document',:action => 'new',content:@query%>
-
 <% @document.each do |d|%>
-    <%= d.subjectname%>
+    <%= link_to document_path(d.id) do%>
+        <%= d.subjectname%>
+        <%= d.title%>
+    <%end%>
 <%end%>
+<%= link_to '新規作成' ,new_document_path(content:params[:content]) %>

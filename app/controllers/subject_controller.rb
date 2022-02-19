@@ -2,8 +2,11 @@ class SubjectController < ApplicationController
   before_action:authenticate_user!
 
   def index
-    @subject = Subject.all
+   
+    @subject = Subject.where(username:current_user.name)
+    
   end
+  
 
   def show
     @subject = Subject.find(params[:id])
@@ -15,7 +18,8 @@ class SubjectController < ApplicationController
   
   def create
     @subject = Subject.create(subject_params)
-    redirect_to subject_path(@subject),notice:"作成しました."
+    # redirect_to subject_path(@subject),notice:"作成しました."
+    redirect_to document_new_path(content:@subject.subjectname),notice:"作成しました."
   end
 
   def edit
@@ -27,7 +31,7 @@ class SubjectController < ApplicationController
 
   private
   def subject_params
-    params.require(:subject).permit(:subjectname,:test)
+    params.require(:subject).permit(:username,:subjectname,:test)
     
   end
 

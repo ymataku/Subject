@@ -17,13 +17,14 @@ ActiveRecord::Schema.define(version: 2022_01_14_131259) do
     t.string "title"
     t.text "content"
     t.integer "difficulty"
+    t.string "username"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    
   end
 
   create_table "subjects", force: :cascade do |t|
     t.string "subjectname"
+    t.string "username"
     t.boolean "test"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
