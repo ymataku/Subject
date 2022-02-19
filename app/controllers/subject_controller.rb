@@ -2,9 +2,7 @@ class SubjectController < ApplicationController
   before_action:authenticate_user!
 
   def index
-    print("this is current user name")
-    # print(current_user.name)
-    print(current_user.name)
+   
     @subject = Subject.where(username:current_user.name)
     
   end
