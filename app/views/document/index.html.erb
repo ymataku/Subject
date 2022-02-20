@@ -10,7 +10,7 @@
             </p>
             <div class="panel-block">
                 <p class="control has-icons-left">
-                <input class="input is-primary" type="text" placeholder="Search">
+                <input class="input is-primary" type="text" placeholder="Search" id="search">
                 <span class="icon is-left">
                     <ion-icon name="search-outline"></ion-icon>
                 </span>
@@ -29,3 +29,22 @@
     </div>
     <%= link_to '新規作成' ,new_document_path(content:params[:content]) %>
 </section>
+
+<script>
+    var search = document.getElementById("search");
+    var value = search.value;
+    $(function(){
+  
+  localStorage.clear();
+  $.ajax({
+    url: '/document/index',  
+    type: 'GET',
+    dataType: 'html',
+    async: true,
+    data: {
+      score: value,
+    },
+  });
+});
+    
+</script>

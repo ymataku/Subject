@@ -14,10 +14,9 @@ class DocumentController < ApplicationController
       @document = Document.where(username:current_user.name).and(Document.where(subjectname: params[:content]))      
     end
 
-    print("this si DBinner")
-
-
-    print(@document)
+    print("this is search innner")
+    print(@value);
+    
   end
 
   def show
