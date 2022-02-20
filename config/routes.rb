@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   resources:subject
+  
   resources:document,only:[:index,:show,:new] 
 
   # get 'document/index/'

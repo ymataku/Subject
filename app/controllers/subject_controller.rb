@@ -2,8 +2,17 @@ class SubjectController < ApplicationController
   before_action:authenticate_user!
 
   def index
-   
-    @subject = Subject.where(username:current_user.name)
+    parameter = params[:group]
+    if parameter == "is"
+      @subject = Subject.where(username:current_user.name).and(Subject.where(test:0))
+    elsif parameter == "notis"
+      @subject = Subject.where(username:current_user.name).and(Subject.where(test:1))
+    elsif parameter == "all"
+      @subject = Subject.where(username:current_user.name)
+    else
+      @subject = Subject.where(username:current_user.name)      
+    end
+
     
   end
   

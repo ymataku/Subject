@@ -1,9 +1,23 @@
 class DocumentController < ApplicationController
   before_action:authenticate_user!
   def index
-    print("this is current user name")
-    print(current_user.name)
-    @document = Document.where(username:current_user.name).and(Document.where(subjectname: params[:content]))
+    parameter = params[:group]
+    if parameter == "difficult"
+      @document = Document.where(username:current_user.name).and(Document.where(subjectname: params[:content]).and(Document.where(difficulty:5).or(Document.where(difficulty:4))))
+    elsif parameter == "medium"
+      @document = Document.where(username:current_user.name).and(Document.where(subjectname: params[:content]).and(Document.where(difficulty:3)))
+    elsif parameter == "easy"
+      @document = Document.where(username:current_user.name).and(Document.where(subjectname: params[:content]).and(Document.where(difficulty:2).or(Document.where(difficulty:1))))
+    elsif parameter == "all"
+      @document = Document.where(username:current_user.name).and(Document.where(subjectname: params[:content]))   
+    else
+      @document = Document.where(username:current_user.name).and(Document.where(subjectname: params[:content]))      
+    end
+
+    print("this si DBinner")
+
+
+    print(@document)
   end
 
   def show
