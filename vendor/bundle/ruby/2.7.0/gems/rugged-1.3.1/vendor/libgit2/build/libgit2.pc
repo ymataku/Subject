@@ -1,0 +1,11 @@
+prefix="C:/Program Files (x86)/libgit2"
+libdir="C:/Program Files (x86)/libgit2/lib"
+includedir="C:/Program Files (x86)/libgit2/include"
+
+Name: libgit2
+Description: The git library, take 2
+Version: 1.3.0
+Libs: -L${libdir} -lgit2
+Libs.private: -lrpcrt4 -lcrypt32 -lole32 -LC:/Ruby27-x64/msys64/mingw64/bin/../lib -lssh2
+Requires.private: zlib
+Cflags: -I${includedir} 

@@ -49,6 +49,9 @@ gem "bootsnap", require: false
 gem 'devise'
 gem "bulma-rails"
 
+gem 'redcarpet'
+
+
 # Use Sass to process CSS
 #gem "sassc-rails"
 

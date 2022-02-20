@@ -1,0 +1,29 @@
+deps/http-parser/CMakeFiles/http-parser.dir/http_parser.c.obj: \
+ C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/deps/http-parser/http_parser.c \
+ C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/deps/http-parser/http_parser.h \
+ C:/Ruby27-x64/msys64/mingw64/x86_64-w64-mingw32/include/sys/types.h \
+ C:/Ruby27-x64/msys64/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
+ C:/Ruby27-x64/msys64/mingw64/x86_64-w64-mingw32/include/corecrt.h \
+ C:/Ruby27-x64/msys64/mingw64/x86_64-w64-mingw32/include/_mingw.h \
+ C:/Ruby27-x64/msys64/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
+ C:/Ruby27-x64/msys64/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h \
+ C:/Ruby27-x64/msys64/mingw64/x86_64-w64-mingw32/include/vadefs.h \
+ C:/Ruby27-x64/msys64/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
+ C:/Ruby27-x64/msys64/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
+ C:/Ruby27-x64/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/stdint.h \
+ C:/Ruby27-x64/msys64/mingw64/x86_64-w64-mingw32/include/stdint.h \
+ C:/Ruby27-x64/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/stddef.h \
+ C:/Ruby27-x64/msys64/mingw64/x86_64-w64-mingw32/include/stddef.h \
+ C:/Ruby27-x64/msys64/mingw64/x86_64-w64-mingw32/include/assert.h \
+ C:/Ruby27-x64/msys64/mingw64/x86_64-w64-mingw32/include/ctype.h \
+ C:/Ruby27-x64/msys64/mingw64/x86_64-w64-mingw32/include/stdlib.h \
+ C:/Ruby27-x64/msys64/mingw64/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
+ C:/Ruby27-x64/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/limits.h \
+ C:/Ruby27-x64/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/syslimits.h \
+ C:/Ruby27-x64/msys64/mingw64/x86_64-w64-mingw32/include/limits.h \
+ C:/Ruby27-x64/msys64/mingw64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
+ C:/Ruby27-x64/msys64/mingw64/x86_64-w64-mingw32/include/malloc.h \
+ C:/Ruby27-x64/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/mm_malloc.h \
+ C:/Ruby27-x64/msys64/mingw64/x86_64-w64-mingw32/include/errno.h \
+ C:/Ruby27-x64/msys64/mingw64/x86_64-w64-mingw32/include/string.h \
+ C:/Ruby27-x64/msys64/mingw64/x86_64-w64-mingw32/include/sec_api/string_s.h

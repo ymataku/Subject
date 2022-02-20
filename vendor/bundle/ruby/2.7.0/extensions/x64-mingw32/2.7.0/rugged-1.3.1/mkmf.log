@@ -1,0 +1,277 @@
+find_executable: checking for make... -------------------- yes
+
+--------------------
+
+find_executable: checking for cmake... -------------------- yes
+
+--------------------
+
+C:\Ruby27-x64\msys64\usr\bin/make.exe
+[  0%] Building C object src/CMakeFiles/git2internal.dir/hash/sha1/collisiondetect.c.obj
+[  1%] Building C object src/CMakeFiles/git2internal.dir/hash/sha1/sha1dc/sha1.c.obj
+[  1%] Building C object src/CMakeFiles/git2internal.dir/hash/sha1/sha1dc/ubc_check.c.obj
+[  2%] Building C object src/CMakeFiles/git2internal.dir/win32/dir.c.obj
+[  2%] Building C object src/CMakeFiles/git2internal.dir/win32/error.c.obj
+[  3%] Building C object src/CMakeFiles/git2internal.dir/win32/findfile.c.obj
+[  3%] Building C object src/CMakeFiles/git2internal.dir/win32/map.c.obj
+[  4%] Building C object src/CMakeFiles/git2internal.dir/win32/path_w32.c.obj
+[  4%] Building C object src/CMakeFiles/git2internal.dir/win32/posix_w32.c.obj
+[  5%] Building C object src/CMakeFiles/git2internal.dir/win32/precompiled.c.obj
+[  5%] Building C object src/CMakeFiles/git2internal.dir/win32/thread.c.obj
+[  6%] Building C object src/CMakeFiles/git2internal.dir/win32/utf-conv.c.obj
+[  6%] Building C object src/CMakeFiles/git2internal.dir/win32/w32_buffer.c.obj
+[  7%] Building C object src/CMakeFiles/git2internal.dir/win32/w32_leakcheck.c.obj
+[  7%] Building C object src/CMakeFiles/git2internal.dir/win32/w32_util.c.obj
+[  8%] Building C object src/CMakeFiles/git2internal.dir/alloc.c.obj
+[  8%] Building C object src/CMakeFiles/git2internal.dir/allocators/failalloc.c.obj
+[  9%] Building C object src/CMakeFiles/git2internal.dir/allocators/stdalloc.c.obj
+[  9%] Building C object src/CMakeFiles/git2internal.dir/allocators/win32_leakcheck.c.obj
+[ 10%] Building C object src/CMakeFiles/git2internal.dir/annotated_commit.c.obj
+[ 10%] Building C object src/CMakeFiles/git2internal.dir/apply.c.obj
+[ 11%] Building C object src/CMakeFiles/git2internal.dir/attr.c.obj
+[ 11%] Building C object src/CMakeFiles/git2internal.dir/attr_file.c.obj
+[ 12%] Building C object src/CMakeFiles/git2internal.dir/attrcache.c.obj
+[ 12%] Building C object src/CMakeFiles/git2internal.dir/blame.c.obj
+[ 13%] Building C object src/CMakeFiles/git2internal.dir/blame_git.c.obj
+[ 13%] Building C object src/CMakeFiles/git2internal.dir/blob.c.obj
+[ 14%] Building C object src/CMakeFiles/git2internal.dir/branch.c.obj
+[ 14%] Building C object src/CMakeFiles/git2internal.dir/buffer.c.obj
+[ 15%] Building C object src/CMakeFiles/git2internal.dir/cache.c.obj
+[ 15%] Building C object src/CMakeFiles/git2internal.dir/checkout.c.obj
+[ 16%] Building C object src/CMakeFiles/git2internal.dir/cherrypick.c.obj
+[ 16%] Building C object src/CMakeFiles/git2internal.dir/clone.c.obj
+[ 17%] Building C object src/CMakeFiles/git2internal.dir/commit.c.obj
+[ 17%] Building C object src/CMakeFiles/git2internal.dir/commit_graph.c.obj
+[ 18%] Building C object src/CMakeFiles/git2internal.dir/commit_list.c.obj
+[ 18%] Building C object src/CMakeFiles/git2internal.dir/config.c.obj
+[ 19%] Building C object src/CMakeFiles/git2internal.dir/config_cache.c.obj
+[ 19%] Building C object src/CMakeFiles/git2internal.dir/config_entries.c.obj
+[ 20%] Building C object src/CMakeFiles/git2internal.dir/config_file.c.obj
+[ 20%] Building C object src/CMakeFiles/git2internal.dir/config_mem.c.obj
+[ 21%] Building C object src/CMakeFiles/git2internal.dir/config_parse.c.obj
+[ 21%] Building C object src/CMakeFiles/git2internal.dir/config_snapshot.c.obj
+[ 22%] Building C object src/CMakeFiles/git2internal.dir/crlf.c.obj
+[ 22%] Building C object src/CMakeFiles/git2internal.dir/date.c.obj
+[ 23%] Building C object src/CMakeFiles/git2internal.dir/delta.c.obj
+[ 23%] Building C object src/CMakeFiles/git2internal.dir/describe.c.obj
+[ 24%] Building C object src/CMakeFiles/git2internal.dir/diff.c.obj
+[ 24%] Building C object src/CMakeFiles/git2internal.dir/diff_driver.c.obj
+[ 25%] Building C object src/CMakeFiles/git2internal.dir/diff_file.c.obj
+[ 25%] Building C object src/CMakeFiles/git2internal.dir/diff_generate.c.obj
+[ 26%] Building C object src/CMakeFiles/git2internal.dir/diff_parse.c.obj
+[ 26%] Building C object src/CMakeFiles/git2internal.dir/diff_print.c.obj
+[ 27%] Building C object src/CMakeFiles/git2internal.dir/diff_stats.c.obj
+[ 27%] Building C object src/CMakeFiles/git2internal.dir/diff_tform.c.obj
+[ 28%] Building C object src/CMakeFiles/git2internal.dir/diff_xdiff.c.obj
+[ 28%] Building C object src/CMakeFiles/git2internal.dir/email.c.obj
+[ 29%] Building C object src/CMakeFiles/git2internal.dir/errors.c.obj
+[ 29%] Building C object src/CMakeFiles/git2internal.dir/fetch.c.obj
+[ 30%] Building C object src/CMakeFiles/git2internal.dir/fetchhead.c.obj
+[ 30%] Building C object src/CMakeFiles/git2internal.dir/filebuf.c.obj
+[ 31%] Building C object src/CMakeFiles/git2internal.dir/filter.c.obj
+[ 31%] Building C object src/CMakeFiles/git2internal.dir/futils.c.obj
+[ 32%] Building C object src/CMakeFiles/git2internal.dir/graph.c.obj
+[ 32%] Building C object src/CMakeFiles/git2internal.dir/hash.c.obj
+[ 33%] Building C object src/CMakeFiles/git2internal.dir/hashsig.c.obj
+[ 33%] Building C object src/CMakeFiles/git2internal.dir/ident.c.obj
+[ 34%] Building C object src/CMakeFiles/git2internal.dir/idxmap.c.obj
+[ 34%] Building C object src/CMakeFiles/git2internal.dir/ignore.c.obj
+[ 35%] Building C object src/CMakeFiles/git2internal.dir/index.c.obj
+[ 35%] Building C object src/CMakeFiles/git2internal.dir/indexer.c.obj
+[ 36%] Building C object src/CMakeFiles/git2internal.dir/iterator.c.obj
+[ 36%] Building C object src/CMakeFiles/git2internal.dir/libgit2.c.obj
+[ 37%] Building C object src/CMakeFiles/git2internal.dir/mailmap.c.obj
+[ 37%] Building C object src/CMakeFiles/git2internal.dir/merge.c.obj
+[ 38%] Building C object src/CMakeFiles/git2internal.dir/merge_driver.c.obj
+[ 38%] Building C object src/CMakeFiles/git2internal.dir/merge_file.c.obj
+[ 39%] Building C object src/CMakeFiles/git2internal.dir/message.c.obj
+[ 39%] Building C object src/CMakeFiles/git2internal.dir/midx.c.obj
+[ 40%] Building C object src/CMakeFiles/git2internal.dir/mwindow.c.obj
+[ 40%] Building C object src/CMakeFiles/git2internal.dir/net.c.obj
+[ 41%] Building C object src/CMakeFiles/git2internal.dir/netops.c.obj
+[ 41%] Building C object src/CMakeFiles/git2internal.dir/notes.c.obj
+[ 42%] Building C object src/CMakeFiles/git2internal.dir/object.c.obj
+[ 42%] Building C object src/CMakeFiles/git2internal.dir/object_api.c.obj
+[ 43%] Building C object src/CMakeFiles/git2internal.dir/odb.c.obj
+[ 43%] Building C object src/CMakeFiles/git2internal.dir/odb_loose.c.obj
+[ 44%] Building C object src/CMakeFiles/git2internal.dir/odb_mempack.c.obj
+[ 44%] Building C object src/CMakeFiles/git2internal.dir/odb_pack.c.obj
+[ 45%] Building C object src/CMakeFiles/git2internal.dir/offmap.c.obj
+[ 45%] Building C object src/CMakeFiles/git2internal.dir/oid.c.obj
+[ 46%] Building C object src/CMakeFiles/git2internal.dir/oidarray.c.obj
+[ 46%] Building C object src/CMakeFiles/git2internal.dir/oidmap.c.obj
+[ 47%] Building C object src/CMakeFiles/git2internal.dir/pack-objects.c.obj
+[ 47%] Building C object src/CMakeFiles/git2internal.dir/pack.c.obj
+[ 48%] Building C object src/CMakeFiles/git2internal.dir/parse.c.obj
+[ 48%] Building C object src/CMakeFiles/git2internal.dir/patch.c.obj
+[ 49%] Building C object src/CMakeFiles/git2internal.dir/patch_generate.c.obj
+[ 49%] Building C object src/CMakeFiles/git2internal.dir/patch_parse.c.obj
+[ 50%] Building C object src/CMakeFiles/git2internal.dir/path.c.obj
+[ 50%] Building C object src/CMakeFiles/git2internal.dir/pathspec.c.obj
+[ 51%] Building C object src/CMakeFiles/git2internal.dir/pool.c.obj
+[ 51%] Building C object src/CMakeFiles/git2internal.dir/posix.c.obj
+[ 52%] Building C object src/CMakeFiles/git2internal.dir/pqueue.c.obj
+[ 52%] Building C object src/CMakeFiles/git2internal.dir/proxy.c.obj
+[ 53%] Building C object src/CMakeFiles/git2internal.dir/push.c.obj
+[ 53%] Building C object src/CMakeFiles/git2internal.dir/reader.c.obj
+[ 54%] Building C object src/CMakeFiles/git2internal.dir/rebase.c.obj
+[ 54%] Building C object src/CMakeFiles/git2internal.dir/refdb.c.obj
+[ 55%] Building C object src/CMakeFiles/git2internal.dir/refdb_fs.c.obj
+[ 55%] Building C object src/CMakeFiles/git2internal.dir/reflog.c.obj
+[ 56%] Building C object src/CMakeFiles/git2internal.dir/refs.c.obj
+[ 56%] Building C object src/CMakeFiles/git2internal.dir/refspec.c.obj
+[ 57%] Building C object src/CMakeFiles/git2internal.dir/regexp.c.obj
+[ 57%] Building C object src/CMakeFiles/git2internal.dir/remote.c.obj
+[ 58%] Building C object src/CMakeFiles/git2internal.dir/repository.c.obj
+[ 58%] Building C object src/CMakeFiles/git2internal.dir/reset.c.obj
+[ 59%] Building C object src/CMakeFiles/git2internal.dir/revert.c.obj
+[ 59%] Building C object src/CMakeFiles/git2internal.dir/revparse.c.obj
+[ 60%] Building C object src/CMakeFiles/git2internal.dir/revwalk.c.obj
+[ 60%] Building C object src/CMakeFiles/git2internal.dir/runtime.c.obj
+[ 61%] Building C object src/CMakeFiles/git2internal.dir/signature.c.obj
+[ 61%] Building C object src/CMakeFiles/git2internal.dir/sortedcache.c.obj
+[ 62%] Building C object src/CMakeFiles/git2internal.dir/stash.c.obj
+[ 62%] Building C object src/CMakeFiles/git2internal.dir/status.c.obj
+[ 63%] Building C object src/CMakeFiles/git2internal.dir/strarray.c.obj
+[ 63%] Building C object src/CMakeFiles/git2internal.dir/streams/mbedtls.c.obj
+[ 64%] Building C object src/CMakeFiles/git2internal.dir/streams/openssl.c.obj
+[ 64%] Building C object src/CMakeFiles/git2internal.dir/streams/openssl_dynamic.c.obj
+[ 65%] Building C object src/CMakeFiles/git2internal.dir/streams/openssl_legacy.c.obj
+[ 65%] Building C object src/CMakeFiles/git2internal.dir/streams/registry.c.obj
+[ 66%] Building C object src/CMakeFiles/git2internal.dir/streams/socket.c.obj
+[ 66%] Building C object src/CMakeFiles/git2internal.dir/streams/stransport.c.obj
+[ 67%] Building C object src/CMakeFiles/git2internal.dir/streams/tls.c.obj
+[ 67%] Building C object src/CMakeFiles/git2internal.dir/strmap.c.obj
+[ 68%] Building C object src/CMakeFiles/git2internal.dir/submodule.c.obj
+[ 68%] Building C object src/CMakeFiles/git2internal.dir/sysdir.c.obj
+[ 69%] Building C object src/CMakeFiles/git2internal.dir/tag.c.obj
+[ 69%] Building C object src/CMakeFiles/git2internal.dir/thread.c.obj
+[ 70%] Building C object src/CMakeFiles/git2internal.dir/threadstate.c.obj
+C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/src/threadstate.c: In function 'threadstate_dispose':
+C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/src/threadstate.c:39:5: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+   39 |     if (threadstate->error_t.message != git_buf__initbuf)
+      |     ^~
+C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/src/threadstate.c:41:9: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+   41 |         threadstate->error_t.message = NULL;
+      |         ^~~~~~~~~~~
+C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/src/threadstate.c: At top level:
+cc1.exe: note: unrecognized command-line option '-Wno-documentation-deprecated-sync' may have been intended to silence earlier diagnostics
+[ 70%] Building C object src/CMakeFiles/git2internal.dir/trace.c.obj
+[ 71%] Building C object src/CMakeFiles/git2internal.dir/trailer.c.obj
+[ 71%] Building C object src/CMakeFiles/git2internal.dir/transaction.c.obj
+[ 72%] Building C object src/CMakeFiles/git2internal.dir/transport.c.obj
+[ 72%] Building C object src/CMakeFiles/git2internal.dir/transports/auth.c.obj
+[ 73%] Building C object src/CMakeFiles/git2internal.dir/transports/auth_negotiate.c.obj
+[ 73%] Building C object src/CMakeFiles/git2internal.dir/transports/auth_ntlm.c.obj
+[ 74%] Building C object src/CMakeFiles/git2internal.dir/transports/credential.c.obj
+[ 74%] Building C object src/CMakeFiles/git2internal.dir/transports/credential_helpers.c.obj
+[ 75%] Building C object src/CMakeFiles/git2internal.dir/transports/git.c.obj
+[ 75%] Building C object src/CMakeFiles/git2internal.dir/transports/http.c.obj
+[ 76%] Building C object src/CMakeFiles/git2internal.dir/transports/httpclient.c.obj
+[ 76%] Building C object src/CMakeFiles/git2internal.dir/transports/local.c.obj
+[ 77%] Building C object src/CMakeFiles/git2internal.dir/transports/smart.c.obj
+[ 77%] Building C object src/CMakeFiles/git2internal.dir/transports/smart_pkt.c.obj
+[ 78%] Building C object src/CMakeFiles/git2internal.dir/transports/smart_protocol.c.obj
+[ 78%] Building C object src/CMakeFiles/git2internal.dir/transports/ssh.c.obj
+[ 79%] Building C object src/CMakeFiles/git2internal.dir/transports/winhttp.c.obj
+[ 79%] Building C object src/CMakeFiles/git2internal.dir/tree-cache.c.obj
+[ 80%] Building C object src/CMakeFiles/git2internal.dir/tree.c.obj
+[ 80%] Building C object src/CMakeFiles/git2internal.dir/tsort.c.obj
+[ 81%] Building C object src/CMakeFiles/git2internal.dir/utf8.c.obj
+[ 81%] Building C object src/CMakeFiles/git2internal.dir/util.c.obj
+[ 82%] Building C object src/CMakeFiles/git2internal.dir/varint.c.obj
+[ 82%] Building C object src/CMakeFiles/git2internal.dir/vector.c.obj
+[ 83%] Building C object src/CMakeFiles/git2internal.dir/wildmatch.c.obj
+[ 83%] Building C object src/CMakeFiles/git2internal.dir/worktree.c.obj
+[ 84%] Building C object src/CMakeFiles/git2internal.dir/xdiff/xdiffi.c.obj
+[ 84%] Building C object src/CMakeFiles/git2internal.dir/xdiff/xemit.c.obj
+[ 85%] Building C object src/CMakeFiles/git2internal.dir/xdiff/xhistogram.c.obj
+[ 85%] Building C object src/CMakeFiles/git2internal.dir/xdiff/xmerge.c.obj
+[ 86%] Building C object src/CMakeFiles/git2internal.dir/xdiff/xpatience.c.obj
+[ 86%] Building C object src/CMakeFiles/git2internal.dir/xdiff/xprepare.c.obj
+[ 87%] Building C object src/CMakeFiles/git2internal.dir/xdiff/xutils.c.obj
+[ 87%] Building C object src/CMakeFiles/git2internal.dir/zstream.c.obj
+[ 87%] Built target git2internal
+[ 87%] Building C object deps/pcre/CMakeFiles/pcre.dir/pcre_byte_order.c.obj
+[ 88%] Building C object deps/pcre/CMakeFiles/pcre.dir/pcre_chartables.c.obj
+[ 88%] Building C object deps/pcre/CMakeFiles/pcre.dir/pcre_compile.c.obj
+[ 89%] Building C object deps/pcre/CMakeFiles/pcre.dir/pcre_config.c.obj
+[ 89%] Building C object deps/pcre/CMakeFiles/pcre.dir/pcre_dfa_exec.c.obj
+[ 90%] Building C object deps/pcre/CMakeFiles/pcre.dir/pcre_exec.c.obj
+[ 90%] Building C object deps/pcre/CMakeFiles/pcre.dir/pcre_fullinfo.c.obj
+[ 91%] Building C object deps/pcre/CMakeFiles/pcre.dir/pcre_get.c.obj
+[ 91%] Building C object deps/pcre/CMakeFiles/pcre.dir/pcre_globals.c.obj
+[ 92%] Building C object deps/pcre/CMakeFiles/pcre.dir/pcre_jit_compile.c.obj
+[ 92%] Building C object deps/pcre/CMakeFiles/pcre.dir/pcre_maketables.c.obj
+[ 93%] Building C object deps/pcre/CMakeFiles/pcre.dir/pcre_newline.c.obj
+[ 93%] Building C object deps/pcre/CMakeFiles/pcre.dir/pcre_ord2utf8.c.obj
+[ 94%] Building C object deps/pcre/CMakeFiles/pcre.dir/pcre_refcount.c.obj
+[ 94%] Building C object deps/pcre/CMakeFiles/pcre.dir/pcre_string_utils.c.obj
+[ 95%] Building C object deps/pcre/CMakeFiles/pcre.dir/pcre_study.c.obj
+[ 95%] Building C object deps/pcre/CMakeFiles/pcre.dir/pcre_tables.c.obj
+[ 96%] Building C object deps/pcre/CMakeFiles/pcre.dir/pcre_ucd.c.obj
+[ 96%] Building C object deps/pcre/CMakeFiles/pcre.dir/pcre_valid_utf8.c.obj
+[ 97%] Building C object deps/pcre/CMakeFiles/pcre.dir/pcre_version.c.obj
+[ 97%] Building C object deps/pcre/CMakeFiles/pcre.dir/pcre_xclass.c.obj
+[ 98%] Building C object deps/pcre/CMakeFiles/pcre.dir/pcreposix.c.obj
+[ 98%] Built target pcre
+[ 99%] Building C object deps/http-parser/CMakeFiles/http-parser.dir/http_parser.c.obj
+[ 99%] Built target http-parser
+Scanning dependencies of target git2
+[ 99%] Building RC object src/CMakeFiles/git2.dir/win32/git2.rc.obj
+[100%] Linking C static library ../libgit2.a
+[100%] Built target git2
+have_library: checking for -lgit2... -------------------- yes
+
+"gcc -o conftest.exe -IC:/Ruby27-x64/include/ruby-2.7.0/x64-mingw32 -IC:/Ruby27-x64/include/ruby-2.7.0/ruby/backward -IC:/Ruby27-x64/include/ruby-2.7.0 -I. -IC:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/ext/rugged/../../vendor/libgit2/include -D__USE_MINGW_ANSI_STDIO=1 -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -O3 -fno-fast-math -fstack-protector-strong  -g -Wall -Wno-comment conftest.c  -LC:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/ext/rugged/../../vendor/libgit2/build -L. -LC:/Ruby27-x64/lib -L. -pipe -s -fstack-protector-strong -LC:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/deps/winhttp  -m64   -lx64-msvcrt-ruby270  -lshell32 -lws2_32 -liphlpapi -limagehlp -lshlwapi   -lwinhttp -lcrypt32 -lrpcrt4 -lole32 -lz -lssh2"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: int main(int argc, char **argv)
+6: {
+7:   return !!argv[argc];
+8: }
+/* end */
+
+"gcc -o conftest.exe -IC:/Ruby27-x64/include/ruby-2.7.0/x64-mingw32 -IC:/Ruby27-x64/include/ruby-2.7.0/ruby/backward -IC:/Ruby27-x64/include/ruby-2.7.0 -I. -IC:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/ext/rugged/../../vendor/libgit2/include -D__USE_MINGW_ANSI_STDIO=1 -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -O3 -fno-fast-math -fstack-protector-strong  -g -Wall -Wno-comment conftest.c  -LC:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/ext/rugged/../../vendor/libgit2/build -L. -LC:/Ruby27-x64/lib -L. -pipe -s -fstack-protector-strong -LC:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/deps/winhttp  -m64   -lx64-msvcrt-ruby270 -lgit2  -lshell32 -lws2_32 -liphlpapi -limagehlp -lshlwapi   -lwinhttp -lcrypt32 -lrpcrt4 -lole32 -lz -lssh2"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <winsock2.h>
+ 4: #include <windows.h>
+ 5: 
+ 6: /*top*/
+ 7: extern int t(void);
+ 8: int main(int argc, char **argv)
+ 9: {
+10:   if (argc > 1000000) {
+11:     int (* volatile tp)(void)=(int (*)(void))&t;
+12:     printf("%d", (*tp)());
+13:   }
+14: 
+15:   return !!argv[argc];
+16: }
+17: 
+18: int t(void) { ; return 0; }
+/* end */
+
+--------------------
+
+have_header: checking for git2.h... -------------------- yes
+
+"gcc -E -IC:/Ruby27-x64/include/ruby-2.7.0/x64-mingw32 -IC:/Ruby27-x64/include/ruby-2.7.0/ruby/backward -IC:/Ruby27-x64/include/ruby-2.7.0 -I. -IC:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/ext/rugged/../../vendor/libgit2/include -D__USE_MINGW_ANSI_STDIO=1 -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -O3 -fno-fast-math -fstack-protector-strong  -g -Wall -Wno-comment  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: #include <git2.h>
+/* end */
+
+--------------------
+
