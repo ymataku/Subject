@@ -51,6 +51,8 @@ gem "bulma-rails"
 
 gem 'redcarpet'
 
+gem  'jquery-rails'
+gem 'jquery-turbolinks'
 
 # Use Sass to process CSS
 #gem "sassc-rails"

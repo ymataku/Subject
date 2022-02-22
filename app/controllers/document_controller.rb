@@ -13,10 +13,6 @@ class DocumentController < ApplicationController
     else
       @document = Document.where(username:current_user.name).and(Document.where(subjectname: params[:content]))      
     end
-
-    print("this is search innner")
-    print(@value);
-    
   end
 
   def show
@@ -43,5 +39,6 @@ class DocumentController < ApplicationController
   private
   def document_params
     params.require(:document).permit(:username,:subjectname,:title,:content,:difficulty)
+
   end
 end
