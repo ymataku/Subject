@@ -21,7 +21,8 @@ Rails.application.routes.draw do
   # root "articles#index"
   resources:subject
   
-  resources:document,only:[:index,:show,:new] 
+  resources:document 
+  
 
   # get 'document/index/'
   post "document/new" => "document#create"

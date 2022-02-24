@@ -14,12 +14,12 @@
                     <li id="notis"><%=link_to "なし",subject_index_path(pagenation:1, group:"notis")%></li>
                 </ul>                                                  
             </div>
-            <% @subject.slice((@pagenation-1)*3..@pagenation*3).each do |s|%>
+            <% @subject.slice((@pagenation-1)*12..@pagenation*12).each do |s|%>
                 <div class="panel-block">
                     <span class="panel-icon">
                         <ion-icon name="folder-open-outline"></ion-icon>
                     </span>
-                    <%= link_to s.subjectname,:controller => 'document', :action => 'index', content: s.subjectname%>
+                    <%= link_to s.subjectname,:controller => 'document', :action => 'index', content: s.subjectname,pagenation:1%>
                 </div>
             <%end%>
         </article>
@@ -38,6 +38,7 @@
         </div>
     </footer>
 </section>
+
 <script>
     elements = document.getElementsByTagName("li");
     var parameter = location.search
@@ -45,14 +46,13 @@
     var paramArray = splitparam[0]
     
     var prevbtn = document.getElementById("prev")
-    var nextbtn = document.getElementById("next")
     var nextbtn2 = document.querySelectorAll("#next")
     
     if(<%=@pagenation%> <= 1){
         prevbtn.setAttribute("disabled", true);
 	    prevbtn.style.color = "White";
 	}
-    if(<%=@pagenation%> >= <%=@pagenumber%>){
+    if(<%=@pagenation%> > <%=@pagenumber%>){
         nextbtn2[0].setAttribute("disabled", true);
 		nextbtn2[0].style.color = "White";
         nextbtn2[1].setAttribute("disabled", true);
@@ -60,7 +60,6 @@
         nextbtn2[2].setAttribute("disabled", true);
 		nextbtn2[2].style.color = "White";
     }
-    
     if(splitparam.length == 1){
         elements[0].className = "is-active"
     }else{

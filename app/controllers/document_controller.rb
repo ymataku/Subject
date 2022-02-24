@@ -1,7 +1,13 @@
 class DocumentController < ApplicationController
   before_action:authenticate_user!
+  
   def index
+    
     parameter = params[:group]
+    @pagenation = params[:pagenation].to_i
+    @parameter = params[:content]
+    @params = parameter
+    
     if parameter == "difficult"
       @document = Document.where(username:current_user.name).and(Document.where(subjectname: params[:content]).and(Document.where(difficulty:5).or(Document.where(difficulty:4))))
     elsif parameter == "medium"
@@ -13,6 +19,13 @@ class DocumentController < ApplicationController
     else
       @document = Document.where(username:current_user.name).and(Document.where(subjectname: params[:content]))      
     end
+    if @document.count < (@pagenation-1)*12
+      @pagenation = @pagenation - 1
+      
+    elsif @pagenation <= 0
+      @pagenation = 1
+    end
+    
   end
 
   def show
@@ -36,9 +49,28 @@ class DocumentController < ApplicationController
     redirect_to document_path(@document),notice:"作成しました."
   end
 
+  def destroy 
+    document = Document.find(params[:id])
+    document.destroy
+    redirect_to document_index_path(content:params[:content],pagenation:params[:pagenation])
+  end
+
+  def edit
+    @document = Document.find(params[:id])
+    
+  end
+
+  def update 
+    @document = Document.find(params[:id])
+    if @document.update(document_params)
+      redirect_to document_path(@document), notice: "更新しました。"
+    end
+  end
+
+
   private
   def document_params
     params.require(:document).permit(:username,:subjectname,:title,:content,:difficulty)
-
+  
   end
 end

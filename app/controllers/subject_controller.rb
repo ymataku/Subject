@@ -12,8 +12,15 @@ class SubjectController < ApplicationController
     else
       @subject = Subject.where(username:current_user.name)      
     end
-    @pagenumber = (@subject.count / 4).to_i
+    @pagenumber = (@subject.count / 12).to_i
     @pagenation = @page_param.to_i
+
+    if @subject.count < (@pagenation-1)*12
+      @pagenation = @pagenation - 1
+    
+    elsif @pagenation <= 0
+      @pagenation = 1
+    end
 
     print("----------------------------------------------------------------------------------------------------------------")
     print("pagenumber")
