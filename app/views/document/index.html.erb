@@ -1,4 +1,5 @@
 
+
 <section>
     <div class="container" style="margin-top:5%;">
         <div class="tabs">
@@ -10,23 +11,35 @@
             </ul>
         </div>
         <article class="panel is-primary">
+        <div class="dropdown" id="dropbox">
+            <div class="dropdown-trigger">
+                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                    <span>Dropdown button</span>
+                    <span class="icon is-small">
+                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                    </span>
+                </button>
+            </div>
+            <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                <div class="dropdown-content">
+                    <a href="#" class="dropdown-item">
+                    編集
+                    </a>
+                    <a class="dropdown-item">
+                    削除
+                    </a>
+                </div>
+            </div>
+        </div>
             <% @document.slice((@pagenation-1)*12...@pagenation*12).each do |d|%>
-                <div class="columns">
-                    <div class="column is-1">
-                        <label class="checkbox">
-                            <input type="checkbox">
-                        </label>
-                    </div>
-                    <div class="column">
-                        <div class="panel-block">
-                            <span class="panel-icon">
-                                <ion-icon name="bookmark-outline"></ion-icon>
-                            </span>
-                            <%= link_to d.title,document_path(d.id)%>
-                            <%= button_to "削除",document_path(id:d.id,content:params[:content],pagenation:params[:pagenation]),method: :delete %>
-                            <%= link_to "更新",edit_document_path(d.id,content:params[:content],pagenation:params[:pagenation])%>
-                        </div>
-                    </div>
+                <div class="panel-block">
+                    <input type="checkbox" value= "<%=d.id%>" name="options">
+                    <span class="panel-icon">
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                    </span>
+                    <%= link_to d.title,document_path(d.id)%>
+                    <%= button_to "削除",document_path(id:d.id,content:params[:content],pagenation:params[:pagenation]),{method: :delete,id:d.id} %>
+                    <%= link_to "更新",edit_document_path(d.id,content:params[:content],pagenation:params[:pagenation])%>
                 </div>
             <%end%>
         </article>
@@ -46,27 +59,53 @@
         </div>
     </footer>
 </section>
+<button type="button" onclick="fun1()">クリック</button>
+
+
+
 
 <script>
     elements = document.getElementsByTagName("li");
     var serch = location.search
     var param = serch.split('&')
-
+    var prevbtn = document.getElementById("prev")
     var nextbtn2 = document.querySelectorAll("#next")
-    
+
+    var dropbox = document.getElementById("dropbox")
+
+    dropbox.addEventListener("click",function(){
+        if(dropbox.classList.contains('is-active')){
+            dropbox.classList.remove('is-active')
+        }else{
+            dropbox.classList.add('is-active')
+        }
+    })
+
+   function fun1 (){
+        var checkbox = document.getElementsByName("options")
+        let list = []
+        for(let i=0;i<checkbox.length;i++){
+            if(checkbox[i].checked){
+                console.log("これはcheckboxの値です"+" "+checkbox[i].value)
+                console.log("これはボタンの値です"+" "+document.getElementById(checkbox[i].value).id)
+                list.push(document.getElementById(checkbox[i].value).id)
+                console.log("削除完了")
+            }
+        }
+    }
+
     if(<%=@pagenation%> <= 1){
         prevbtn.setAttribute("disabled", true);
 	    prevbtn.style.color = "White";
 	}
-    if(<%=@pagenation%> > <%=@pagenumber%>){
-        nextbtn2[0].setAttribute("disabled", true);
-		nextbtn2[0].style.color = "White";
-        nextbtn2[1].setAttribute("disabled", true);
-		nextbtn2[1].style.color = "White";
-        nextbtn2[2].setAttribute("disabled", true);
-		nextbtn2[2].style.color = "White";
+    if(<%=@pagenation%> > <%=@pagenation%>){
+        nextbtn2[0].setAttribute("disabled", true)
+		nextbtn2[0].style.color = "White"
+        nextbtn2[1].setAttribute("disabled", true)
+		nextbtn2[1].style.color = "White"
+        nextbtn2[2].setAttribute("disabled", true)
+		nextbtn2[2].style.color = "White"
     }
-
     if(param.length == 1){
         elements[0].className = "is-active"
     }else{
