@@ -22,12 +22,7 @@ class SubjectController < ApplicationController
       @pagenation = 1
     end
 
-    print("----------------------------------------------------------------------------------------------------------------")
-    print("pagenumber")
-    print(@pagenumber)
-    print("pagenation")
-    print(@pagenation)
-    
+  
   end
   
   def show
