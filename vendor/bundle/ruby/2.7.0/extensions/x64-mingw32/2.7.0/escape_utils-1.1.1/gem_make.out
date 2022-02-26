@@ -1,0 +1,30 @@
+current directory: C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/escape_utils-1.1.1/ext/escape_utils
+C:/Ruby27-x64/bin/ruby.exe -I C:/Ruby27-x64/lib/ruby/2.7.0 -r ./siteconf20220219-2376-1hi2x2j.rb extconf.rb
+creating Makefile
+
+current directory: C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/escape_utils-1.1.1/ext/escape_utils
+make "DESTDIR=" clean
+
+current directory: C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/escape_utils-1.1.1/ext/escape_utils
+make "DESTDIR="
+generating escape_utils-x64-mingw32.def
+compiling buffer.c
+buffer.c: In function 'gh_buf_cmp':
+buffer.c:245:45: warning: implicit declaration of function 'MIN' [-Wimplicit-function-declaration]
+  245 |         int result = memcmp(a->ptr, b->ptr, MIN(a->size, b->size));
+      |                                             ^~~
+compiling escape_utils.c
+compiling houdini_href_e.c
+compiling houdini_html_e.c
+compiling houdini_html_u.c
+compiling houdini_js_e.c
+compiling houdini_js_u.c
+compiling houdini_uri_e.c
+compiling houdini_uri_u.c
+compiling houdini_xml_e.c
+linking shared-object escape_utils/escape_utils.so
+C:/Ruby27-x64/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: buffer.o:buffer.c:(.text+0xb15): undefined reference to `MIN'
+collect2.exe: error: ld returned 1 exit status
+make: *** [Makefile:262: escape_utils.so] エラー 1
+
+make failed, exit code 2

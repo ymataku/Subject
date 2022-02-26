@@ -1,4 +1,13 @@
-<h1><%=@document.title%><h1>
-<p><%=@document.content%></p>
+<section class="hero is-success">
+    <div class="hero-body">
+        <p class="title">
+            資料閲覧ページ
+        </p>
+    </div>
+</section>
+
+<h1><%=@document.title%></h1>
+<%=markdown(@document.content)%>
 <p><%=@document.difficulty%></p>
 
+<%= link_to "戻る",document_index_path(content:params[:content],pagenation:1)%>

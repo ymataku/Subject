@@ -1,0 +1,322 @@
+Performing C SOURCE FILE Test HAVE_STRUCT_STAT_ST_MTIM failed with the following output:
+Change Dir: C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Ruby27-x64/msys64/usr/bin/make.exe -f Makefile cmTC_bdf51/fast && /usr/bin/make  -f CMakeFiles/cmTC_bdf51.dir/build.make CMakeFiles/cmTC_bdf51.dir/build
+make[1]: 繝・ぅ繝ｬ繧ｯ繝医Μ '/c/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp' 縺ｫ蜈･繧翫∪縺・Building C object CMakeFiles/cmTC_bdf51.dir/src.c.obj
+/C/Ruby27-x64/msys64/mingw64/bin/gcc.exe -DHAVE_STRUCT_STAT_ST_MTIM  -fPIC  -o CMakeFiles/cmTC_bdf51.dir/src.c.obj -c /C/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp/src.c
+C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp/src.c: In function 'main':
+C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp/src.c:7:36: error: 'struct stat' has no member named 'st_mtim'; did you mean 'st_mtime'?
+    7 |   (void)sizeof(((struct stat *)0)->st_mtim);
+      |                                    ^~~~~~~
+      |                                    st_mtime
+make[1]: *** [CMakeFiles/cmTC_bdf51.dir/build.make:78: CMakeFiles/cmTC_bdf51.dir/src.c.obj] 繧ｨ繝ｩ繝ｼ 1
+make[1]: 繝・ぅ繝ｬ繧ｯ繝医Μ '/c/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp' 縺九ｉ蜃ｺ縺ｾ縺・make: *** [Makefile:127: cmTC_bdf51/fast] 繧ｨ繝ｩ繝ｼ 2
+
+
+Source file was:
+
+#include <sys/types.h>
+#include <sys/stat.h>
+
+int main()
+{
+  (void)sizeof(((struct stat *)0)->st_mtim);
+  return 0;
+}
+
+Performing C SOURCE FILE Test HAVE_STRUCT_STAT_ST_MTIMESPEC failed with the following output:
+Change Dir: C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Ruby27-x64/msys64/usr/bin/make.exe -f Makefile cmTC_a892b/fast && /usr/bin/make  -f CMakeFiles/cmTC_a892b.dir/build.make CMakeFiles/cmTC_a892b.dir/build
+make[1]: 繝・ぅ繝ｬ繧ｯ繝医Μ '/c/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp' 縺ｫ蜈･繧翫∪縺・Building C object CMakeFiles/cmTC_a892b.dir/src.c.obj
+/C/Ruby27-x64/msys64/mingw64/bin/gcc.exe -DHAVE_STRUCT_STAT_ST_MTIMESPEC  -fPIC  -o CMakeFiles/cmTC_a892b.dir/src.c.obj -c /C/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp/src.c
+C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp/src.c: In function 'main':
+C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp/src.c:7:36: error: 'struct stat' has no member named 'st_mtimespec'; did you mean 'st_mtime'?
+    7 |   (void)sizeof(((struct stat *)0)->st_mtimespec);
+      |                                    ^~~~~~~~~~~~
+      |                                    st_mtime
+make[1]: *** [CMakeFiles/cmTC_a892b.dir/build.make:78: CMakeFiles/cmTC_a892b.dir/src.c.obj] 繧ｨ繝ｩ繝ｼ 1
+make[1]: 繝・ぅ繝ｬ繧ｯ繝医Μ '/c/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp' 縺九ｉ蜃ｺ縺ｾ縺・make: *** [Makefile:127: cmTC_a892b/fast] 繧ｨ繝ｩ繝ｼ 2
+
+
+Source file was:
+
+#include <sys/types.h>
+#include <sys/stat.h>
+
+int main()
+{
+  (void)sizeof(((struct stat *)0)->st_mtimespec);
+  return 0;
+}
+
+Performing C SOURCE FILE Test HAVE_STRUCT_STAT_MTIME_NSEC failed with the following output:
+Change Dir: C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Ruby27-x64/msys64/usr/bin/make.exe -f Makefile cmTC_ec0a8/fast && /usr/bin/make  -f CMakeFiles/cmTC_ec0a8.dir/build.make CMakeFiles/cmTC_ec0a8.dir/build
+make[1]: 繝・ぅ繝ｬ繧ｯ繝医Μ '/c/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp' 縺ｫ蜈･繧翫∪縺・Building C object CMakeFiles/cmTC_ec0a8.dir/src.c.obj
+/C/Ruby27-x64/msys64/mingw64/bin/gcc.exe -DHAVE_STRUCT_STAT_MTIME_NSEC  -fPIC  -o CMakeFiles/cmTC_ec0a8.dir/src.c.obj -c /C/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp/src.c
+C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp/src.c: In function 'main':
+C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp/src.c:6:36: error: 'struct stat' has no member named 'st_mtime_nsec'; did you mean 'st_mtime'?
+    6 |   (void)sizeof(((struct stat *)0)->st_mtime_nsec);
+      |                                    ^~~~~~~~~~~~~
+      |                                    st_mtime
+make[1]: *** [CMakeFiles/cmTC_ec0a8.dir/build.make:78: CMakeFiles/cmTC_ec0a8.dir/src.c.obj] 繧ｨ繝ｩ繝ｼ 1
+make[1]: 繝・ぅ繝ｬ繧ｯ繝医Μ '/c/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp' 縺九ｉ蜃ｺ縺ｾ縺・make: *** [Makefile:127: cmTC_ec0a8/fast] 繧ｨ繝ｩ繝ｼ 2
+
+
+Source file was:
+
+#include <sys/stat.h>
+
+int main()
+{
+  (void)sizeof(((struct stat *)0)->st_mtime_nsec);
+  return 0;
+}
+
+Determining if the function futimens exists failed with the following output:
+Change Dir: C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Ruby27-x64/msys64/usr/bin/make.exe -f Makefile cmTC_a4648/fast && /usr/bin/make  -f CMakeFiles/cmTC_a4648.dir/build.make CMakeFiles/cmTC_a4648.dir/build
+make[1]: 繝・ぅ繝ｬ繧ｯ繝医Μ '/c/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp' 縺ｫ蜈･繧翫∪縺・Building C object CMakeFiles/cmTC_a4648.dir/CheckFunctionExists.c.obj
+/C/Ruby27-x64/msys64/mingw64/bin/gcc.exe   -fPIC -DCHECK_FUNCTION_EXISTS=futimens -o CMakeFiles/cmTC_a4648.dir/CheckFunctionExists.c.obj -c /C/Ruby27-x64/msys64/mingw64/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a4648.exe
+/C/Ruby27-x64/msys64/mingw64/bin/cmake.exe -E rm -f CMakeFiles/cmTC_a4648.dir/objects.a
+/C/Ruby27-x64/msys64/mingw64/bin/ar.exe qc CMakeFiles/cmTC_a4648.dir/objects.a "CMakeFiles/cmTC_a4648.dir/CheckFunctionExists.c.obj" 
+/C/Ruby27-x64/msys64/mingw64/bin/gcc.exe -fPIC -DCHECK_FUNCTION_EXISTS=futimens -Wl,--whole-archive CMakeFiles/cmTC_a4648.dir/objects.a -Wl,--no-whole-archive -o cmTC_a4648.exe -Wl,--out-implib,libcmTC_a4648.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
+C:/Ruby27-x64/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: CMakeFiles/cmTC_a4648.dir/objects.a(CheckFunctionExists.c.obj):CheckFunctionExists.c:(.text+0x15): undefined reference to `futimens'
+collect2.exe: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_a4648.dir/build.make:100: cmTC_a4648.exe] 繧ｨ繝ｩ繝ｼ 1
+make[1]: 繝・ぅ繝ｬ繧ｯ繝医Μ '/c/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp' 縺九ｉ蜃ｺ縺ｾ縺・make: *** [Makefile:127: cmTC_a4648/fast] 繧ｨ繝ｩ繝ｼ 2
+
+
+
+Performing C SOURCE FILE Test IS_WDOCUMENTATION_SUPPORTED failed with the following output:
+Change Dir: C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Ruby27-x64/msys64/usr/bin/make.exe -f Makefile cmTC_8b61f/fast && /usr/bin/make  -f CMakeFiles/cmTC_8b61f.dir/build.make CMakeFiles/cmTC_8b61f.dir/build
+make[1]: Entering directory '/c/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8b61f.dir/src.c.obj
+/C/Ruby27-x64/msys64/mingw64/bin/gcc.exe -DIS_WDOCUMENTATION_SUPPORTED  -D_GNU_SOURCE -fPIC -Wall -Wextra    -Wdocumentation -o CMakeFiles/cmTC_8b61f.dir/src.c.obj -c /C/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp/src.c
+gcc.exe: error: unrecognized command-line option '-Wdocumentation'
+make[1]: *** [CMakeFiles/cmTC_8b61f.dir/build.make:78: CMakeFiles/cmTC_8b61f.dir/src.c.obj] Error 1
+make[1]: Leaving directory '/c/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_8b61f/fast] Error 2
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test IS_WC11_EXTENSIONS_SUPPORTED failed with the following output:
+Change Dir: C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Ruby27-x64/msys64/usr/bin/make.exe -f Makefile cmTC_cdd36/fast && /usr/bin/make  -f CMakeFiles/cmTC_cdd36.dir/build.make CMakeFiles/cmTC_cdd36.dir/build
+make[1]: Entering directory '/c/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cdd36.dir/src.c.obj
+/C/Ruby27-x64/msys64/mingw64/bin/gcc.exe -DIS_WC11_EXTENSIONS_SUPPORTED  -D_GNU_SOURCE -fPIC -Wall -Wextra -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion    -Wc11-extensions -o CMakeFiles/cmTC_cdd36.dir/src.c.obj -c /C/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp/src.c
+gcc.exe: error: unrecognized command-line option '-Wc11-extensions'; did you mean '-fms-extensions'?
+make[1]: *** [CMakeFiles/cmTC_cdd36.dir/build.make:78: CMakeFiles/cmTC_cdd36.dir/src.c.obj] Error 1
+make[1]: Leaving directory '/c/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_cdd36/fast] Error 2
+
+
+Source file was:
+int main(void) { return 0; }
+Determining if the prototype qsort_r exists for HAVE_QSORT_R_BSD failed with the following output:
+Change Dir: C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Ruby27-x64/msys64/usr/bin/make.exe -f Makefile cmTC_d413b/fast && /usr/bin/make  -f CMakeFiles/cmTC_d413b.dir/build.make CMakeFiles/cmTC_d413b.dir/build
+make[1]: 繝・ぅ繝ｬ繧ｯ繝医Μ '/c/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp' 縺ｫ蜈･繧翫∪縺・Building C object CMakeFiles/cmTC_d413b.dir/CheckPrototypeDefinition.c.obj
+/C/Ruby27-x64/msys64/mingw64/bin/gcc.exe   -D_GNU_SOURCE -fPIC -Wall -Wextra -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc99-c11-compat -Wno-format -Wno-format-security -Wmissing-declarations  -o CMakeFiles/cmTC_d413b.dir/CheckPrototypeDefinition.c.obj -c /C/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c
+C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c: In function 'checkSymbol':
+C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c:10:26: error: 'qsort_r' undeclared (first use in this function); did you mean 'qsort_s'?
+   10 |   cmakeRequireSymbol(0, &qsort_r);
+      |                          ^~~~~~~
+      |                          qsort_s
+C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c:10:26: note: each undeclared identifier is reported only once for each function it appears in
+C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c: At top level:
+C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c:14:6: warning: no previous declaration for 'qsort_r' [-Wmissing-declarations]
+   14 | void qsort_r(void *base, size_t nmemb, size_t size, void *thunk, int (*compar)(void *, const void *, const void *)) {
+      |      ^~~~~~~
+C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c: In function 'qsort_r':
+C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c:14:20: warning: unused parameter 'base' [-Wunused-parameter]
+   14 | void qsort_r(void *base, size_t nmemb, size_t size, void *thunk, int (*compar)(void *, const void *, const void *)) {
+      |              ~~~~~~^~~~
+C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c:14:33: warning: unused parameter 'nmemb' [-Wunused-parameter]
+   14 | void qsort_r(void *base, size_t nmemb, size_t size, void *thunk, int (*compar)(void *, const void *, const void *)) {
+      |                          ~~~~~~~^~~~~
+C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c:14:47: warning: unused parameter 'size' [-Wunused-parameter]
+   14 | void qsort_r(void *base, size_t nmemb, size_t size, void *thunk, int (*compar)(void *, const void *, const void *)) {
+      |                                        ~~~~~~~^~~~
+C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c:14:59: warning: unused parameter 'thunk' [-Wunused-parameter]
+   14 | void qsort_r(void *base, size_t nmemb, size_t size, void *thunk, int (*compar)(void *, const void *, const void *)) {
+      |                                                     ~~~~~~^~~~~
+C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c:14:72: warning: unused parameter 'compar' [-Wunused-parameter]
+   14 | void qsort_r(void *base, size_t nmemb, size_t size, void *thunk, int (*compar)(void *, const void *, const void *)) {
+      |                                                                  ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c: At top level:
+cc1.exe: note: unrecognized command-line option '-Wno-documentation-deprecated-sync' may have been intended to silence earlier diagnostics
+make[1]: *** [CMakeFiles/cmTC_d413b.dir/build.make:78: CMakeFiles/cmTC_d413b.dir/CheckPrototypeDefinition.c.obj] 繧ｨ繝ｩ繝ｼ 1
+make[1]: 繝・ぅ繝ｬ繧ｯ繝医Μ '/c/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp' 縺九ｉ蜃ｺ縺ｾ縺・make: *** [Makefile:127: cmTC_d413b/fast] 繧ｨ繝ｩ繝ｼ 2
+
+
+
+#include <stdlib.h>
+
+
+static void cmakeRequireSymbol(int dummy, ...) {
+  (void) dummy;
+}
+
+static void checkSymbol(void) {
+#ifndef qsort_r
+  cmakeRequireSymbol(0, &qsort_r);
+#endif
+}
+
+void qsort_r(void *base, size_t nmemb, size_t size, void *thunk, int (*compar)(void *, const void *, const void *)) {
+  return ;
+}
+
+#ifdef __CLASSIC_C__
+int main() {
+  int ac;
+  char*av[];
+#else
+int main(int ac, char *av[]) {
+#endif
+  checkSymbol();
+  if (ac > 1000) {
+    return *av[0];
+  }
+  return 0;
+}
+
+
+Determining if the prototype qsort_r exists for HAVE_QSORT_R_GNU failed with the following output:
+Change Dir: C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Ruby27-x64/msys64/usr/bin/make.exe -f Makefile cmTC_1edf9/fast && /usr/bin/make  -f CMakeFiles/cmTC_1edf9.dir/build.make CMakeFiles/cmTC_1edf9.dir/build
+make[1]: 繝・ぅ繝ｬ繧ｯ繝医Μ '/c/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp' 縺ｫ蜈･繧翫∪縺・Building C object CMakeFiles/cmTC_1edf9.dir/CheckPrototypeDefinition.c.obj
+/C/Ruby27-x64/msys64/mingw64/bin/gcc.exe   -D_GNU_SOURCE -fPIC -Wall -Wextra -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc99-c11-compat -Wno-format -Wno-format-security -Wmissing-declarations  -o CMakeFiles/cmTC_1edf9.dir/CheckPrototypeDefinition.c.obj -c /C/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c
+C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c: In function 'checkSymbol':
+C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c:10:26: error: 'qsort_r' undeclared (first use in this function); did you mean 'qsort_s'?
+   10 |   cmakeRequireSymbol(0, &qsort_r);
+      |                          ^~~~~~~
+      |                          qsort_s
+C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c:10:26: note: each undeclared identifier is reported only once for each function it appears in
+C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c: At top level:
+C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c:14:6: warning: no previous declaration for 'qsort_r' [-Wmissing-declarations]
+   14 | void qsort_r(void *base, size_t nmemb, size_t size, int (*compar)(const void *, const void *, void *), void *arg) {
+      |      ^~~~~~~
+C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c: In function 'qsort_r':
+C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c:14:20: warning: unused parameter 'base' [-Wunused-parameter]
+   14 | void qsort_r(void *base, size_t nmemb, size_t size, int (*compar)(const void *, const void *, void *), void *arg) {
+      |              ~~~~~~^~~~
+C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c:14:33: warning: unused parameter 'nmemb' [-Wunused-parameter]
+   14 | void qsort_r(void *base, size_t nmemb, size_t size, int (*compar)(const void *, const void *, void *), void *arg) {
+      |                          ~~~~~~~^~~~~
+C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c:14:47: warning: unused parameter 'size' [-Wunused-parameter]
+   14 | void qsort_r(void *base, size_t nmemb, size_t size, int (*compar)(const void *, const void *, void *), void *arg) {
+      |                                        ~~~~~~~^~~~
+C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c:14:59: warning: unused parameter 'compar' [-Wunused-parameter]
+   14 | void qsort_r(void *base, size_t nmemb, size_t size, int (*compar)(const void *, const void *, void *), void *arg) {
+      |                                                     ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c:14:110: warning: unused parameter 'arg' [-Wunused-parameter]
+   14 | void qsort_r(void *base, size_t nmemb, size_t size, int (*compar)(const void *, const void *, void *), void *arg) {
+      |                                                                                                        ~~~~~~^~~
+C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c: At top level:
+cc1.exe: note: unrecognized command-line option '-Wno-documentation-deprecated-sync' may have been intended to silence earlier diagnostics
+make[1]: *** [CMakeFiles/cmTC_1edf9.dir/build.make:78: CMakeFiles/cmTC_1edf9.dir/CheckPrototypeDefinition.c.obj] 繧ｨ繝ｩ繝ｼ 1
+make[1]: 繝・ぅ繝ｬ繧ｯ繝医Μ '/c/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp' 縺九ｉ蜃ｺ縺ｾ縺・make: *** [Makefile:127: cmTC_1edf9/fast] 繧ｨ繝ｩ繝ｼ 2
+
+
+
+#include <stdlib.h>
+
+
+static void cmakeRequireSymbol(int dummy, ...) {
+  (void) dummy;
+}
+
+static void checkSymbol(void) {
+#ifndef qsort_r
+  cmakeRequireSymbol(0, &qsort_r);
+#endif
+}
+
+void qsort_r(void *base, size_t nmemb, size_t size, int (*compar)(const void *, const void *, void *), void *arg) {
+  return ;
+}
+
+#ifdef __CLASSIC_C__
+int main() {
+  int ac;
+  char*av[];
+#else
+int main(int ac, char *av[]) {
+#endif
+  checkSymbol();
+  if (ac > 1000) {
+    return *av[0];
+  }
+  return 0;
+}
+
+
+Determining if the function clock_gettime exists in the rt failed with the following output:
+Change Dir: C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Ruby27-x64/msys64/usr/bin/make.exe -f Makefile cmTC_20170/fast && /usr/bin/make  -f CMakeFiles/cmTC_20170.dir/build.make CMakeFiles/cmTC_20170.dir/build
+make[1]: 繝・ぅ繝ｬ繧ｯ繝医Μ '/c/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp' 縺ｫ蜈･繧翫∪縺・Building C object CMakeFiles/cmTC_20170.dir/CheckFunctionExists.c.obj
+/C/Ruby27-x64/msys64/mingw64/bin/gcc.exe   -D_GNU_SOURCE -fPIC -Wall -Wextra -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc99-c11-compat -Wno-format -Wno-format-security -Wmissing-declarations -DCHECK_FUNCTION_EXISTS=clock_gettime -o CMakeFiles/cmTC_20170.dir/CheckFunctionExists.c.obj -c /C/Ruby27-x64/msys64/mingw64/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_20170.exe
+/C/Ruby27-x64/msys64/mingw64/bin/cmake.exe -E rm -f CMakeFiles/cmTC_20170.dir/objects.a
+/C/Ruby27-x64/msys64/mingw64/bin/ar.exe qc CMakeFiles/cmTC_20170.dir/objects.a "CMakeFiles/cmTC_20170.dir/CheckFunctionExists.c.obj" 
+/C/Ruby27-x64/msys64/mingw64/bin/gcc.exe -D_GNU_SOURCE -fPIC -Wall -Wextra -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc99-c11-compat -Wno-format -Wno-format-security -Wmissing-declarations -DCHECK_FUNCTION_EXISTS=clock_gettime -Wl,--whole-archive CMakeFiles/cmTC_20170.dir/objects.a -Wl,--no-whole-archive -o cmTC_20170.exe -Wl,--out-implib,libcmTC_20170.dll.a -Wl,--major-image-version,0,--minor-image-version,0   -L/C/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp/time.h  -lrt -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
+C:/Ruby27-x64/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find -lrt
+collect2.exe: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_20170.dir/build.make:100: cmTC_20170.exe] 繧ｨ繝ｩ繝ｼ 1
+make[1]: 繝・ぅ繝ｬ繧ｯ繝医Μ '/c/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp' 縺九ｉ蜃ｺ縺ｾ縺・make: *** [Makefile:127: cmTC_20170/fast] 繧ｨ繝ｩ繝ｼ 2
+
+
+
+Determining if the function bcopy exists failed with the following output:
+Change Dir: C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Ruby27-x64/msys64/usr/bin/make.exe -f Makefile cmTC_cdd67/fast && /usr/bin/make  -f CMakeFiles/cmTC_cdd67.dir/build.make CMakeFiles/cmTC_cdd67.dir/build
+make[1]: 繝・ぅ繝ｬ繧ｯ繝医Μ '/c/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp' 縺ｫ蜈･繧翫∪縺・Building C object CMakeFiles/cmTC_cdd67.dir/CheckFunctionExists.c.obj
+/C/Ruby27-x64/msys64/mingw64/bin/gcc.exe   -D_GNU_SOURCE -fPIC -Wall -Wextra -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc99-c11-compat -Wno-format -Wno-format-security -Wmissing-declarations -DCHECK_FUNCTION_EXISTS=bcopy -o CMakeFiles/cmTC_cdd67.dir/CheckFunctionExists.c.obj -c /C/Ruby27-x64/msys64/mingw64/share/cmake-3.22/Modules/CheckFunctionExists.c
+<command-line>: warning: conflicting types for built-in function 'bcopy'; expected 'void(const void *, void *, long long unsigned int)' [-Wbuiltin-declaration-mismatch]
+C:/Ruby27-x64/msys64/mingw64/share/cmake-3.22/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro 'CHECK_FUNCTION_EXISTS'
+    7 |   CHECK_FUNCTION_EXISTS(void);
+      |   ^~~~~~~~~~~~~~~~~~~~~
+cc1.exe: note: unrecognized command-line option '-Wno-documentation-deprecated-sync' may have been intended to silence earlier diagnostics
+Linking C executable cmTC_cdd67.exe
+/C/Ruby27-x64/msys64/mingw64/bin/cmake.exe -E rm -f CMakeFiles/cmTC_cdd67.dir/objects.a
+/C/Ruby27-x64/msys64/mingw64/bin/ar.exe qc CMakeFiles/cmTC_cdd67.dir/objects.a "CMakeFiles/cmTC_cdd67.dir/CheckFunctionExists.c.obj" 
+/C/Ruby27-x64/msys64/mingw64/bin/gcc.exe -D_GNU_SOURCE -fPIC -Wall -Wextra -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc99-c11-compat -Wno-format -Wno-format-security -Wmissing-declarations -DCHECK_FUNCTION_EXISTS=bcopy -Wl,--whole-archive CMakeFiles/cmTC_cdd67.dir/objects.a -Wl,--no-whole-archive -o cmTC_cdd67.exe -Wl,--out-implib,libcmTC_cdd67.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
+C:/Ruby27-x64/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: CMakeFiles/cmTC_cdd67.dir/objects.a(CheckFunctionExists.c.obj):CheckFunctionExists.c:(.text+0x15): undefined reference to `bcopy'
+collect2.exe: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_cdd67.dir/build.make:100: cmTC_cdd67.exe] 繧ｨ繝ｩ繝ｼ 1
+make[1]: 繝・ぅ繝ｬ繧ｯ繝医Μ '/c/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp' 縺九ｉ蜃ｺ縺ｾ縺・make: *** [Makefile:127: cmTC_cdd67/fast] 繧ｨ繝ｩ繝ｼ 2
+
+
+
+Determining if the function strtoq exists failed with the following output:
+Change Dir: C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Ruby27-x64/msys64/usr/bin/make.exe -f Makefile cmTC_80004/fast && /usr/bin/make  -f CMakeFiles/cmTC_80004.dir/build.make CMakeFiles/cmTC_80004.dir/build
+make[1]: 繝・ぅ繝ｬ繧ｯ繝医Μ '/c/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp' 縺ｫ蜈･繧翫∪縺・Building C object CMakeFiles/cmTC_80004.dir/CheckFunctionExists.c.obj
+/C/Ruby27-x64/msys64/mingw64/bin/gcc.exe   -D_GNU_SOURCE -fPIC -Wall -Wextra -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc99-c11-compat -Wno-format -Wno-format-security -Wmissing-declarations -DCHECK_FUNCTION_EXISTS=strtoq -o CMakeFiles/cmTC_80004.dir/CheckFunctionExists.c.obj -c /C/Ruby27-x64/msys64/mingw64/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_80004.exe
+/C/Ruby27-x64/msys64/mingw64/bin/cmake.exe -E rm -f CMakeFiles/cmTC_80004.dir/objects.a
+/C/Ruby27-x64/msys64/mingw64/bin/ar.exe qc CMakeFiles/cmTC_80004.dir/objects.a "CMakeFiles/cmTC_80004.dir/CheckFunctionExists.c.obj" 
+/C/Ruby27-x64/msys64/mingw64/bin/gcc.exe -D_GNU_SOURCE -fPIC -Wall -Wextra -Wno-documentation-deprecated-sync -Wno-missing-field-initializers -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wc99-c11-compat -Wno-format -Wno-format-security -Wmissing-declarations -DCHECK_FUNCTION_EXISTS=strtoq -Wl,--whole-archive CMakeFiles/cmTC_80004.dir/objects.a -Wl,--no-whole-archive -o cmTC_80004.exe -Wl,--out-implib,libcmTC_80004.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
+C:/Ruby27-x64/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: CMakeFiles/cmTC_80004.dir/objects.a(CheckFunctionExists.c.obj):CheckFunctionExists.c:(.text+0x15): undefined reference to `strtoq'
+collect2.exe: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_80004.dir/build.make:100: cmTC_80004.exe] 繧ｨ繝ｩ繝ｼ 1
+make[1]: 繝・ぅ繝ｬ繧ｯ繝医Μ '/c/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build/CMakeFiles/CMakeTmp' 縺九ｉ蜃ｺ縺ｾ縺・make: *** [Makefile:127: cmTC_80004/fast] 繧ｨ繝ｩ繝ｼ 2
+
+
+

@@ -1,4 +1,3 @@
-
 <section class="hero is-success">
 <div class="hero-body">
   <p class="title">
@@ -10,21 +9,23 @@
 </div>
 </section>
 <section class="container">
-    <%= form_for @document,url:document_new_path do |f|%>
-        <%= f.hidden_field :username,:value => current_user.name %>
-        <%= f.hidden_field :subjectname,:value => @query %>
-        <div class="field">
-            <%= f.label:"タイトル",class:"label"%>
-            <%= f.text_field:title,class:"input"%>
-        </div>
-        <div class="field">
-            <%= f.label:"内容",class:"label"%>
-            <%= f.text_area:content,class:"textarea",placeholder:"10 lines of textarea",rows:"10"%>
-        </div>
-        <div class="field">
-            <%= f.label:"難易度",class:"label"%>
-            <%= f.number_field:difficulty,min:1,max:5%>
-        </div>
-        <%=f.submit%>
-    <%end%>
+    <div style="margin-top:5%;">
+        <%= form_for @document,url:document_new_path(content:params[:content]) do |f|%>
+            <%= f.hidden_field :username,:value => current_user.name %>
+            <%= f.hidden_field :subjectname,:value => params[:content] %>
+            <div class="field">
+                <%= f.label:"タイトル",class:"label"%>
+                <%= f.text_field:title,class:"input",style:"border-width:thin; border-color:#2f4f4f;"%>
+            </div>
+            <div class="field" style="margin-top:3%">
+                <%= f.label:"内容",class:"label"%>
+                <%= f.text_area:content,class:"textarea",placeholder:"10 lines of textarea",rows:"10" ,style:"border-width:thin; border-color:#2f4f4f;"%>
+            </div>
+            <div class="field" style="margin-top:3%">
+                <%= f.label:"難易度",class:"label"%>
+                <%= f.number_field:difficulty,min:1,max:5%>
+            </div>
+            <%=f.submit "作成",class:"button is-info",style:"margin-top:1%"%>
+        <%end%>
+    </div>
 </section>

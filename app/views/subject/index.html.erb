@@ -3,40 +3,73 @@
         <h1 class="title">資料一覧</h1>
     </div>
 </section>
-<% @subject.each do |s|%>
-    <div class="columns">
-        <div class="column">
-            <div class="card">
-                <header class="card-header">
-                    <p class="card-header-title">
-                        <%= link_to s.subjectname,:controller => 'document', :action => 'index', content: s.subjectname%>
-                    </p>
-                    <button class="card-header-icon" aria-label="more options">
-                    <span class="icon">
-                        <i class="fas fa-angle-down" aria-hidden="true"></i>
-                    </span>
-                    </button>
-                </header>
-                <div class="card-content">
-                    <div class="content">
-                        <% if !s.test%>
-                            <h1>テストあり</h1>
-                        <%else%>
-                            <h1>テストなし</h1>
-                        <%end%>
-                    </div>
-                </div>
-                <footer class="card-footer">
-                    <a href="#" class="card-footer-item">Save</a>
-                    <a href="#" class="card-footer-item">Edit</a>
-                    <a href="#" class="card-footer-item">Delete</a>
-                </footer>
+
+<section>
+    <div class="container" style="margin-top:5%;">
+        <article class="panel is-primary">
+            <div class="tabs">
+                <ul>
+                    <li id="all"><%=link_to "All",subject_index_path(pagenation:1, group:"all")%></li>
+                    <li id="is"><%=link_to "あり",subject_index_path(pagenation:1, group:"is")%></li>
+                    <li id="notis"><%=link_to "なし",subject_index_path(pagenation:1, group:"notis")%></li>
+                </ul>                                                  
             </div>
-        </div>
+            <% @subject.slice((@pagenation-1)*12..@pagenation*12).each do |s|%>
+                <div class="panel-block">
+                    <span class="panel-icon">
+                        <ion-icon name="folder-open-outline"></ion-icon>
+                    </span>
+                    <%= link_to s.subjectname,:controller => 'document', :action => 'index', content: s.subjectname,pagenation:1%>
+                </div>
+            <%end%>
+        </article>
     </div>
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+                <a class="pagination-previous" id="prev" href="./subject?group=<%=@parameter%>&pagenation=<%=@pagenation-1%>">Previous</a>
+                <a class="pagination-next" id="next" href="./subject?group=<%=@parameter%>&pagenation=<%=@pagenation+1%>">Next page</a>
+                <ul class="pagination-list">
+                    <li><a class="pagination-link" id="next" aria-label="Goto page 1" href="./subject?group=<%=@parameter%>&pagenation=<%=@pagenation%>"><%=@pagenation%></a></li>
+                    <li><a class="pagination-link" id="next" aria-label="Goto page 1" href="./subject?group=<%=@parameter%>&pagenation=<%=@pagenation+1%>"><%=@pagenation+1%></a></li>                                
+                    <li><span class="pagination-ellipsis">&hellip;</span></li>                   
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</section>
 
-
-
-
+<script>
+    elements = document.getElementsByTagName("li");
+    var parameter = location.search
+    var splitparam = parameter.split('&')
+    var paramArray = splitparam[0]
     
-<%end%>
+    var prevbtn = document.getElementById("prev")
+    var nextbtn2 = document.querySelectorAll("#next")
+    
+    if(<%=@pagenation%> <= 1){
+        prevbtn.setAttribute("disabled", true);
+	    prevbtn.style.color = "White";
+	}
+    if(<%=@pagenation%> > <%=@pagenumber%>){
+        nextbtn2[0].setAttribute("disabled", true);
+		nextbtn2[0].style.color = "White";
+        nextbtn2[1].setAttribute("disabled", true);
+		nextbtn2[1].style.color = "White";
+        nextbtn2[2].setAttribute("disabled", true);
+		nextbtn2[2].style.color = "White";
+    }
+    if(splitparam.length == 1){
+        elements[0].className = "is-active"
+    }else{
+        paramArray  = paramArray.split('=')[1]
+        if(paramArray){
+            for(let i=0;i<3;i++){
+                if(paramArray == elements[i].id){
+                    elements[i].className = "is-active"
+                }      
+            }
+        }
+    }
+</script>

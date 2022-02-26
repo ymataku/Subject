@@ -1,0 +1,185 @@
+current directory: C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/ext/rugged
+C:/Ruby27-x64/bin/ruby.exe -I C:/Ruby27-x64/lib/ruby/2.7.0 -r ./siteconf20220219-27396-8x99t5.rb extconf.rb
+checking for make... yes
+checking for cmake... yes
+-- The C compiler identification is GNU 11.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/Ruby27-x64/msys64/mingw64/bin/gcc.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Found PkgConfig: C:/Ruby27-x64/msys64/mingw64/bin/pkgconf.exe (found version "1.8.0") 
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Performing Test HAVE_STRUCT_STAT_ST_MTIM
+-- Performing Test HAVE_STRUCT_STAT_ST_MTIM - Failed
+-- Performing Test HAVE_STRUCT_STAT_ST_MTIMESPEC
+-- Performing Test HAVE_STRUCT_STAT_ST_MTIMESPEC - Failed
+-- Performing Test HAVE_STRUCT_STAT_MTIME_NSEC
+-- Performing Test HAVE_STRUCT_STAT_MTIME_NSEC - Failed
+-- Looking for futimens
+-- Looking for futimens - not found
+-- Performing Test IS_WALL_SUPPORTED
+-- Performing Test IS_WALL_SUPPORTED - Success
+-- Performing Test IS_WEXTRA_SUPPORTED
+-- Performing Test IS_WEXTRA_SUPPORTED - Success
+-- Performing Test IS_WDOCUMENTATION_SUPPORTED
+-- Performing Test IS_WDOCUMENTATION_SUPPORTED - Failed
+-- Performing Test IS_WNO_DOCUMENTATION_DEPRECATED_SYNC_SUPPORTED
+-- Performing Test IS_WNO_DOCUMENTATION_DEPRECATED_SYNC_SUPPORTED - Success
+-- Performing Test IS_WNO_MISSING_FIELD_INITIALIZERS_SUPPORTED
+-- Performing Test IS_WNO_MISSING_FIELD_INITIALIZERS_SUPPORTED - Success
+-- Performing Test IS_WSTRICT_ALIASING_SUPPORTED
+-- Performing Test IS_WSTRICT_ALIASING_SUPPORTED - Success
+-- Performing Test IS_WSTRICT_PROTOTYPES_SUPPORTED
+-- Performing Test IS_WSTRICT_PROTOTYPES_SUPPORTED - Success
+-- Performing Test IS_WDECLARATION_AFTER_STATEMENT_SUPPORTED
+-- Performing Test IS_WDECLARATION_AFTER_STATEMENT_SUPPORTED - Success
+-- Performing Test IS_WSHIFT_COUNT_OVERFLOW_SUPPORTED
+-- Performing Test IS_WSHIFT_COUNT_OVERFLOW_SUPPORTED - Success
+-- Performing Test IS_WUNUSED_CONST_VARIABLE_SUPPORTED
+-- Performing Test IS_WUNUSED_CONST_VARIABLE_SUPPORTED - Success
+-- Performing Test IS_WUNUSED_FUNCTION_SUPPORTED
+-- Performing Test IS_WUNUSED_FUNCTION_SUPPORTED - Success
+-- Performing Test IS_WINT_CONVERSION_SUPPORTED
+-- Performing Test IS_WINT_CONVERSION_SUPPORTED - Success
+-- Performing Test IS_WC11_EXTENSIONS_SUPPORTED
+-- Performing Test IS_WC11_EXTENSIONS_SUPPORTED - Failed
+-- Performing Test IS_WC99_C11_COMPAT_SUPPORTED
+-- Performing Test IS_WC99_C11_COMPAT_SUPPORTED - Success
+-- Performing Test IS_WNO_FORMAT_SUPPORTED
+-- Performing Test IS_WNO_FORMAT_SUPPORTED - Success
+-- Performing Test IS_WNO_FORMAT_SECURITY_SUPPORTED
+-- Performing Test IS_WNO_FORMAT_SECURITY_SUPPORTED - Success
+-- Performing Test IS_WMISSING_DECLARATIONS_SUPPORTED
+-- Performing Test IS_WMISSING_DECLARATIONS_SUPPORTED - Success
+-- Checking prototype qsort_r for HAVE_QSORT_R_BSD
+-- Checking prototype qsort_r for HAVE_QSORT_R_BSD - False
+-- Checking prototype qsort_r for HAVE_QSORT_R_GNU
+-- Checking prototype qsort_r for HAVE_QSORT_R_GNU - False
+-- Looking for qsort_s
+-- Looking for qsort_s - found
+-- Looking for clock_gettime in rt
+-- Looking for clock_gettime in rt - not found
+-- Found OpenSSL: C:/Ruby27-x64/msys64/mingw64/lib/libcrypto.dll.a (found version "1.1.1l")  
+-- Could NOT find PCRE (missing: PCRE_LIBRARY PCRE_POSIX_LIBRARY PCRE_INCLUDE_DIR) 
+-- Looking for dirent.h
+-- Looking for dirent.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for inttypes.h
+-- Looking for inttypes.h - found
+-- Looking for sys/stat.h
+-- Looking for sys/stat.h - found
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for unistd.h
+-- Looking for unistd.h - found
+-- Looking for windows.h
+-- Looking for windows.h - found
+-- Looking for bcopy
+-- Looking for bcopy - not found
+-- Looking for memmove
+-- Looking for memmove - found
+-- Looking for strerror
+-- Looking for strerror - found
+-- Looking for strtoll
+-- Looking for strtoll - found
+-- Looking for strtoq
+-- Looking for strtoq - not found
+-- Looking for _strtoi64
+-- Looking for _strtoi64 - found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of long long
+-- Check size of long long - done
+-- Check size of unsigned long long
+-- Check size of unsigned long long - done
+-- Performing Test IS_WNO_UNUSED_FUNCTION_SUPPORTED
+-- Performing Test IS_WNO_UNUSED_FUNCTION_SUPPORTED - Success
+-- Performing Test IS_WNO_IMPLICIT_FALLTHROUGH_SUPPORTED
+-- Performing Test IS_WNO_IMPLICIT_FALLTHROUGH_SUPPORTED - Success
+-- http-parser version 2 was not found or disabled; using bundled 3rd-party sources.
+-- Performing Test IS_WIMPLICIT_FALLTHROUGH_1_SUPPORTED
+-- Performing Test IS_WIMPLICIT_FALLTHROUGH_1_SUPPORTED - Success
+-- Found ZLIB: C:/Ruby27-x64/msys64/mingw64/lib/libz.dll.a (found version "1.2.11") 
+-- Checking for module 'libssh2'
+--   Found libssh2, version 1.10.0
+--   Resolved libraries: C:/Ruby27-x64/msys64/mingw64/lib/libssh2.dll.a
+-- Looking for libssh2_userauth_publickey_frommemory in C:/Ruby27-x64/msys64/mingw64/lib/libssh2.dll.a
+-- Looking for libssh2_userauth_publickey_frommemory in C:/Ruby27-x64/msys64/mingw64/lib/libssh2.dll.a - found
+-- Could NOT find GSSAPI (missing: GSSAPI_LIBRARIES GSSAPI_INCLUDE_DIR) 
+-- Enabled features:
+ * nanoseconds, whether to use sub-second file mtimes and ctimes
+ * tracing, tracing support
+ * threadsafe, threadsafe support
+ * HTTPS, using WinHTTP
+ * SHA, using CollisionDetection
+ * regex, using bundled PCRE
+ * http-parser, http-parser support (bundled)
+ * zlib, using system zlib
+ * SSH, SSH transport support
+
+-- Disabled features:
+ * debugpool, debug pool allocator
+ * debugalloc, debug strict allocators
+ * debugopen, path validation in open
+ * futimens, futimens support
+ * ntlmclient, NTLM authentication support for Unix
+ * SPNEGO, SPNEGO authentication support
+ * iconv, iconv encoding conversion support
+
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/vendor/libgit2/build
+ -- C:\Ruby27-x64\msys64\usr\bin/make.exe
+checking for -lgit2... yes
+checking for git2.h... yes
+creating Makefile
+
+current directory: C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/ext/rugged
+make "DESTDIR=" clean
+
+current directory: C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/ext/rugged
+make "DESTDIR="
+generating rugged-x64-mingw32.def
+compiling rugged.c
+compiling rugged_allocator.c
+compiling rugged_backend.c
+compiling rugged_blame.c
+compiling rugged_blob.c
+compiling rugged_branch.c
+compiling rugged_branch_collection.c
+compiling rugged_commit.c
+compiling rugged_config.c
+compiling rugged_cred.c
+compiling rugged_diff.c
+compiling rugged_diff_delta.c
+compiling rugged_diff_hunk.c
+compiling rugged_diff_line.c
+compiling rugged_index.c
+compiling rugged_note.c
+compiling rugged_object.c
+compiling rugged_patch.c
+compiling rugged_rebase.c
+compiling rugged_reference.c
+compiling rugged_reference_collection.c
+compiling rugged_remote.c
+compiling rugged_remote_collection.c
+compiling rugged_repo.c
+compiling rugged_revwalk.c
+compiling rugged_settings.c
+compiling rugged_signature.c
+compiling rugged_submodule.c
+compiling rugged_submodule_collection.c
+compiling rugged_tag.c
+compiling rugged_tag_collection.c
+compiling rugged_tree.c
+linking shared-object rugged/rugged.so
+
+current directory: C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/rugged-1.3.1/ext/rugged
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 rugged.so ./.gem.20220219-27396-ftzs0v/rugged
