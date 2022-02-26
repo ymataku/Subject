@@ -36,10 +36,10 @@
     <% if user_signed_in?%>
       <div id="navbarExampleTransparentExample" class="navbar-menu">
         <div class="navbar-item">
-          <%= link_to "資料一覧", subject_index_path(pagenation:1), class: "navbar-item button is-warning is-light" %>
+          <%= link_to "教科一覧", subject_index_path(pagenation:1), class: "navbar-item button is-warning is-light" %>
         </div>
         <div class="navbar-item">
-          <%= link_to "資料作成", new_subject_path, class: "navbar-item button is-warning is-light" %>
+          <%= link_to "教科作成", new_subject_path, class: "navbar-item button is-warning is-light" %>
         </div>
         <div class="navbar-end">
           <div class="navbar-item">

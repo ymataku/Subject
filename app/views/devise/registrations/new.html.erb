@@ -1,34 +1,61 @@
-<h2>Sign up</h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-
-  
-  <div class="field">
-  <%= f.label :email %><br />
-  <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+<section class="hero is-success">
+  <div class="hero-body">
+    <p class="title">
+      教科作成
+    </p>
+    <p class="subtitle">
+      作成する教科の名前とテストの有無を入力してください。
+    </p>
   </div>
-  
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
-  </div>
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
+</section>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
+<section class="container" style="margin-top:5%;">
+  <div class="columns is-centered">
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+      <div class="field">
+        <%= f.label :name ,class:"label"%>
+        <p class="control has-icons-left">
+          <%= f.text_field :name, autofocus: true, autocomplete: "name",class:"input" %>
+          <span class="icon is-small is-left">
+              <ion-icon name="book-outline"></ion-icon>
+          </span>
+        </p>
+      </div>
+      <div class="field">
+        <%= f.label :password ,class:"label"%>
+        <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %>
+        <p class="control has-icons-left">
+          <%= f.password_field :password, autocomplete: "new-password" ,class:"input"%>
+          <span class="icon is-small is-left">
+              <ion-icon name="book-outline"></ion-icon>
+          </span>
+        </p>
+      </div>
+      <div class="field">
+        <%= f.label :password_confirmation ,class:"label"%>
+        <p class="control has-icons-left">
+          <%= f.password_field :password_confirmation, autocomplete: "new-password",class:"input"%>
+          <span class="icon is-small is-left">
+              <ion-icon name="book-outline"></ion-icon>
+          </span>
+        </p>
+      </div>
 
-<%= render "devise/shared/links" %>
+      <div class="actions">
+        <%= f.submit "Sign up" ,class:"info"%>
+      </div>
+    <% end %>
+  </div>
+</section>
+
+    
+
+
+
+
+
+

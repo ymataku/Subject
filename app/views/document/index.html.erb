@@ -10,41 +10,28 @@
                 <li id="easy"><%=link_to "そんなに",document_index_path(content:params[:content],group:"easy",pagenation:1)%></li>
             </ul>
         </div>
-        <article class="panel is-primary">
-        <div class="dropdown" id="dropbox">
-            <div class="dropdown-trigger">
-                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                    <span>Dropdown button</span>
-                    <span class="icon is-small">
-                    <i class="fas fa-angle-down" aria-hidden="true"></i>
-                    </span>
-                </button>
-            </div>
-            <div class="dropdown-menu" id="dropdown-menu" role="menu">
-                <div class="dropdown-content">
-                    <a href="#" class="dropdown-item">
-                    編集
-                    </a>
-                    <a class="dropdown-item">
-                    削除
-                    </a>
-                </div>
-            </div>
+        <div class="parent">
+            <button class="item button" id="item2" onclick="deletebutton()"><%= link_to '作成' ,new_document_path(content:params[:content]) %></button>
+            <button class="item button" id="item" onclick="deletebutton()"><ion-icon name="trash-outline"></ion-icon></button>
+        
         </div>
+        <article class="panel is-primary">
             <% @document.slice((@pagenation-1)*12...@pagenation*12).each do |d|%>
                 <div class="panel-block">
-                    <input type="checkbox" value= "<%=d.id%>" name="options">
+                    <input type="checkbox" value= "<%=d.id%>" name="options" onclick="check_search()">
                     <span class="panel-icon">
                         <ion-icon name="bookmark-outline"></ion-icon>
                     </span>
-                    <%= link_to d.title,document_path(d.id)%>
-                    <%= button_to "削除",document_path(id:d.id,content:params[:content],pagenation:params[:pagenation]),{method: :delete,id:d.id} %>
-                    <%= link_to "更新",edit_document_path(d.id,content:params[:content],pagenation:params[:pagenation])%>
+                    <%= link_to d.title,document_path(d.id,content:params[:content])%>
+                    <div style="display:none;">
+                        <%= button_to "削除",document_path(id:d.id,content:params[:content],pagenation:params[:pagenation]),{method: :delete,id:d.id} %>
+                        <%= link_to "更新",edit_document_path(d.id,content:params[:content],pagenation:params[:pagenation])%>
+                    </div>
                 </div>
             <%end%>
         </article>
     </div>
-    <%= link_to '新規作成' ,new_document_path(content:params[:content]) %>
+    
     <footer class="footer">
         <div class="content has-text-centered">
             <nav class="pagination is-centered" role="navigation" aria-label="pagination">
@@ -59,9 +46,24 @@
         </div>
     </footer>
 </section>
-<button type="button" onclick="fun1()">クリック</button>
 
+<style>
+.item{
+    margin-left:10px;
+    margin-top:auto;
+    
 
+}
+.parent{
+    display: flex;
+    flex-wrap: wrap;
+    align-items:center
+    width: 600px;
+    
+    margin-bottom:10px;
+}
+
+</style>
 
 
 <script>
@@ -70,29 +72,35 @@
     var param = serch.split('&')
     var prevbtn = document.getElementById("prev")
     var nextbtn2 = document.querySelectorAll("#next")
-
-    var dropbox = document.getElementById("dropbox")
-
-    dropbox.addEventListener("click",function(){
-        if(dropbox.classList.contains('is-active')){
-            dropbox.classList.remove('is-active')
-        }else{
-            dropbox.classList.add('is-active')
-        }
-    })
-
-   function fun1 (){
-        var checkbox = document.getElementsByName("options")
-        let list = []
+    var a = document.getElementById("item")
+    var checkbox = document.getElementsByName("options")
+    
+    
+    function check_search(){
+        var check_item = 0
         for(let i=0;i<checkbox.length;i++){
             if(checkbox[i].checked){
-                console.log("これはcheckboxの値です"+" "+checkbox[i].value)
-                console.log("これはボタンの値です"+" "+document.getElementById(checkbox[i].value).id)
-                list.push(document.getElementById(checkbox[i].value).id)
-                console.log("削除完了")
+                check_item = 1
+            }
+        }
+        if(check_item == 1){
+            a.classList.add("is-danger")
+        }else{
+            a.classList.remove("is-danger")
+        }
+    }
+    function deletebutton(){ 
+        for(let i=0;i<checkbox.length;i++){
+            if(checkbox[i].checked){
+                document.getElementById(checkbox[i].value).click()
+
             }
         }
     }
+    
+
+
+   
 
     if(<%=@pagenation%> <= 1){
         prevbtn.setAttribute("disabled", true);

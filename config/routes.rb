@@ -27,5 +27,5 @@ Rails.application.routes.draw do
   # get 'document/index/'
   post "document/new" => "document#create"
 
-  root to: "home#index"
+  root to: "subject#index"
 end

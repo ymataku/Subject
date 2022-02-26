@@ -2,7 +2,6 @@ class DocumentController < ApplicationController
   before_action:authenticate_user!
   
   def index
-    
     parameter = params[:group]
     @pagenation = params[:pagenation].to_i
     @parameter = params[:content]
@@ -26,6 +25,7 @@ class DocumentController < ApplicationController
       @pagenation = 1
     end
     
+    print(@document.to_json)
   end
 
   def show
@@ -34,19 +34,14 @@ class DocumentController < ApplicationController
 
   def new
     @document = Document.new
-    @query = params[:content]
-    if @query.present?
-      print(@query)
-    end
   end
 
   def create
-    @document = Document.create(document_params)
-    @pamams = params[:content]
+    document = Document.create(document_params)
     if document_params.present?
       print(document_params)
     end
-    redirect_to document_path(@document),notice:"作成しました."
+    redirect_to document_path(document,content:params[:content]),notice:"作成しました."
   end
 
   def destroy 
