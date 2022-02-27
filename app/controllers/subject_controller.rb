@@ -46,6 +46,10 @@ class SubjectController < ApplicationController
 
   end
 
+  def destroy
+    destroy = Document.where(username:current_user.name).and(Document.where(subjectname:params[:content]))
+  end
+
   private
   def subject_params
     params.require(:subject).permit(:username,:subjectname,:test)

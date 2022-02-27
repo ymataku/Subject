@@ -15,12 +15,13 @@
                 </ul>                                                  
             </div>
             <div class="parent">
-                <button class="item button" id="item2" onclick="deletebutton()"><%= link_to '作成' ,new_document_path(content:params[:content]) %></button>
-                <button class="item button" id="item" onclick="deletebutton()"><ion-icon name="trash-outline"></ion-icon></button>
+                <button class="item button" id="item2"><%= link_to '作成' ,new_document_path(content:params[:content]) %></button>
+                <button class="item button" id="item"><ion-icon name="trash-outline"></ion-icon></button>
+                
             </div>
             <% @subject.slice((@pagenation-1)*12..@pagenation*12).each do |s|%>
                 <div class="panel-block">
-                    <input type="checkbox" value= "<%=d.id%>" name="options" onclick="check_search()">
+                    <input type="checkbox" id="<%=s.id%>" value= "<%=s.subjectname%>" name="options" onclick="check_search()">
                     <span class="panel-icon">
                         <ion-icon name="folder-open-outline"></ion-icon>
                     </span>
@@ -45,6 +46,9 @@
 </section>
 
 <script>
+   
+   
+    
     elements = document.getElementsByTagName("li");
     var parameter = location.search
     var splitparam = parameter.split('&')
