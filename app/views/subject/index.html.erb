@@ -1,6 +1,6 @@
 <section class="hero is-success">
     <div class="hero-body">
-        <h1 class="title">資料一覧</h1>
+        <h1 class="title">教科一覧</h1>
     </div>
 </section>
 
@@ -14,8 +14,13 @@
                     <li id="notis"><%=link_to "なし",subject_index_path(pagenation:1, group:"notis")%></li>
                 </ul>                                                  
             </div>
+            <div class="parent">
+                <button class="item button" id="item2" onclick="deletebutton()"><%= link_to '作成' ,new_document_path(content:params[:content]) %></button>
+                <button class="item button" id="item" onclick="deletebutton()"><ion-icon name="trash-outline"></ion-icon></button>
+            </div>
             <% @subject.slice((@pagenation-1)*12..@pagenation*12).each do |s|%>
                 <div class="panel-block">
+                    <input type="checkbox" value= "<%=d.id%>" name="options" onclick="check_search()">
                     <span class="panel-icon">
                         <ion-icon name="folder-open-outline"></ion-icon>
                     </span>
