@@ -8,9 +8,10 @@
 
 <section class="container" style="margin-top:5%;">
     <h1 class="title"><%=@document.title%></h1>
+    <p class="subtitle">重要度:<%=@document.difficulty%></p>
     <div class="parent">
         <button class="item button" id="item2"><%= link_to '編集' ,edit_document_path(content:params[:content]) %></button>
-        <button class="item button" id="item" onclick="deletebutton()"><ion-icon name="trash-outline"></ion-icon></button>
+        <button class="item button" id="item"><ion-icon name="trash-outline"></ion-icon></button>
     </div>
     <div class="card">
         <div class="card-content">
@@ -19,7 +20,6 @@
             </div>
         </div>
     </div>
-    <p><%=@document.difficulty%></p>
     <%= link_to "資料一覧へ",document_index_path(content:params[:content],pagenation:1)%>
 </section>
 
@@ -27,15 +27,12 @@
 .item{
     margin-left:10px;
     margin-top:auto;
-    
-
 }
 .parent{
     display: flex;
     flex-wrap: wrap;
     align-items:center
     width: 600px;
-    
 }
 
 </style>

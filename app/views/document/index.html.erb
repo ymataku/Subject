@@ -56,15 +56,12 @@
 .item{
     margin-left:10px;
     margin-top:auto;
-    
-
 }
 .parent{
     display: flex;
     flex-wrap: wrap;
     align-items:center
     width: 600px;
-    
     margin-bottom:10px;
 }
 
@@ -75,11 +72,8 @@
     elements = document.getElementsByTagName("li");
     var serch = location.search
     var param = serch.split('&')
-    var prevbtn = document.getElementById("prev")
-    var nextbtn2 = document.querySelectorAll("#next")
     var a = document.getElementById("item")
     var checkbox = document.getElementsByName("options")
-    
     
     function check_search(){
         var check_item = 0
@@ -101,23 +95,6 @@
 
             }
         }
-    }
-    
-
-
-   
-
-    if(<%=@pagenation%> <= 1){
-        prevbtn.setAttribute("disabled", true);
-	    prevbtn.style.color = "White";
-	}
-    if(<%=@pagenation%> > <%=@pagenation%>){
-        nextbtn2[0].setAttribute("disabled", true)
-		nextbtn2[0].style.color = "White"
-        nextbtn2[1].setAttribute("disabled", true)
-		nextbtn2[1].style.color = "White"
-        nextbtn2[2].setAttribute("disabled", true)
-		nextbtn2[2].style.color = "White"
     }
     if(param.length == 1){
         elements[0].className = "is-active"
