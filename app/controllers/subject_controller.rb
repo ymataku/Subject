@@ -1,5 +1,7 @@
 class SubjectController < ApplicationController
   before_action:authenticate_user!
+
+  
   def index
     
     @parameter = params[:group]
@@ -26,22 +28,24 @@ class SubjectController < ApplicationController
     elsif @pagenation <= 0
       @pagenation = 1
     end
-
-  
   end
   
 
   def new
     @subject = Subject.new
+  
   end
   
   def create
     @subject = Subject.create(subject_params)
-    redirect_to document_new_path(content:@subject.subjectname),notice:"作成しました."
+    if @subject.save!
+      redirect_to document_new_path(content:@subject.subjectname),notice:"作成しました."
+    else
+      render :new
+    end
   end
 
   def edit
-    
     @subject = Subject.find(params[:id])
     
   end

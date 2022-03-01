@@ -13,18 +13,18 @@
 ActiveRecord::Schema.define(version: 2022_02_26_174120) do
 
   create_table "documents", force: :cascade do |t|
-    t.string "subjectname"
-    t.string "title"
+    t.string "subjectname", null: false
+    t.string "title", null: false
     t.text "content"
     t.integer "difficulty"
-    t.string "username"
+    t.string "username", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "subjects", force: :cascade do |t|
-    t.string "subjectname"
-    t.string "username"
+    t.string "subjectname", null: false
+    t.string "username", null: false
     t.boolean "test"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

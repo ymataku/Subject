@@ -1,11 +1,11 @@
 class CreateDocuments < ActiveRecord::Migration[7.0]
   def change
     create_table :documents do |t|
-      t.string :subjectname
-      t.string :title
+      t.string :subjectname,     null:false
+      t.string :title,           null:false
       t.text :content
       t.integer :difficulty
-      t.string :username
+      t.string :username,        null:false
       t.timestamps
     end
   end

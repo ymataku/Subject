@@ -38,10 +38,11 @@ class DocumentController < ApplicationController
 
   def create
     document = Document.create(document_params)
-    if document_params.present?
-      print(document_params)
+    if document.save
+      redirect_to document_path(document,content:params[:content]),notice:"作成しました."
+    else
+      render :new
     end
-    redirect_to document_path(document,content:params[:content]),notice:"作成しました."
   end
 
   def destroy 
@@ -58,6 +59,8 @@ class DocumentController < ApplicationController
     @document = Document.find(params[:id])
     if @document.update(document_params)
       redirect_to document_path(@document,content:params[:content]), notice: "更新しました。"
+    else
+      render :edit
     end
   end
 
