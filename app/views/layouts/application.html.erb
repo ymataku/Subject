@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Railsfolder</title>
+    <title>Subject</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,6 +11,7 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+   
   </head>
 
   <body>
@@ -44,9 +45,6 @@
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="field is-grouped">
-              <p class="control">
-                <%= link_to "マイページ", user_path(id:current_user), class: "button is-warning is-light" %>
-              </p>
               <p class="control">
                 <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "button is-warning is-light" %>
               </p>

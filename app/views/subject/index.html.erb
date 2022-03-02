@@ -1,6 +1,6 @@
 <section class="hero is-success">
     <div class="hero-body">
-        <h1 class="title">資料一覧</h1>
+        <h1 class="title">教科一覧</h1>
     </div>
 </section>
 
@@ -14,12 +14,24 @@
                     <li id="notis"><%=link_to "なし",subject_index_path(pagenation:1, group:"notis")%></li>
                 </ul>                                                  
             </div>
+            <div class="parent">
+                <button class="item button" id="item2"><%= link_to '作成' ,new_subject_path %></button>
+                <button class="item button" id="edit" onclick="editbutton()">編集</button>
+                <button class="item button" id="delete" onclick="deletebutton()"><ion-icon name="trash-outline"></ion-icon></button>
+                
+            </div>
             <% @subject.slice((@pagenation-1)*12..@pagenation*12).each do |s|%>
                 <div class="panel-block">
+                
+                    <input type="checkbox"  id="id#{s.id}" value= "<%=s.id%>" name="options" onclick="check_search()">
                     <span class="panel-icon">
                         <ion-icon name="folder-open-outline"></ion-icon>
                     </span>
                     <%= link_to s.subjectname,:controller => 'document', :action => 'index', content: s.subjectname,pagenation:1%>
+                    <div style="display:none;">
+                        <%= button_to "削除",subject_path(id:s.id),{method: :delete,id:s.id,form:{data: {turbo_confirm:"削除しますか?"}}}%>
+                        <%= button_to "編集","/subject/#{s.id}/edit",{method: :get,name:s.id}%>
+                    </div>
                 </div>
             <%end%>
         </article>
@@ -27,11 +39,11 @@
     <footer class="footer">
         <div class="content has-text-centered">
             <nav class="pagination is-centered" role="navigation" aria-label="pagination">
-                <a class="pagination-previous" id="prev" href="./subject?group=<%=@parameter%>&pagenation=<%=@pagenation-1%>">Previous</a>
-                <a class="pagination-next" id="next" href="./subject?group=<%=@parameter%>&pagenation=<%=@pagenation+1%>">Next page</a>
+                <a class="pagination-previous"  href="./subject?group=<%=@parameter%>&pagenation=<%=@pagenation-1%>">Previous</a>
+                <a class="pagination-next" href="./subject?group=<%=@parameter%>&pagenation=<%=@pagenation+1%>">Next page</a>
                 <ul class="pagination-list">
-                    <li><a class="pagination-link" id="next" aria-label="Goto page 1" href="./subject?group=<%=@parameter%>&pagenation=<%=@pagenation%>"><%=@pagenation%></a></li>
-                    <li><a class="pagination-link" id="next" aria-label="Goto page 1" href="./subject?group=<%=@parameter%>&pagenation=<%=@pagenation+1%>"><%=@pagenation+1%></a></li>                                
+                    <li><a class="pagination-link"  aria-label="Goto page 1" href="./subject?group=<%=@parameter%>&pagenation=<%=@pagenation%>"><%=@pagenation%></a></li>
+                    <li><a class="pagination-link"  aria-label="Goto page 1" href="./subject?group=<%=@parameter%>&pagenation=<%=@pagenation+1%>"><%=@pagenation+1%></a></li>                                
                     <li><span class="pagination-ellipsis">&hellip;</span></li>                   
                 </ul>
             </nav>
@@ -40,26 +52,49 @@
 </section>
 
 <script>
+    var checkbox = document.getElementsByName("options")
+    var btn_delete =   document.getElementById("delete")
+    var btn_edit = document.getElementById("edit")
+    
+    function check_search(){
+        var check_item = 0
+        for(let i=0;i<checkbox.length;i++){
+            if(checkbox[i].checked){
+                check_item = 1
+            }
+        }
+        if(check_item == 1){
+            btn_delete.classList.add("is-danger")
+            btn_edit.classList.add("is-warning")
+
+        }else{
+            btn_delete.classList.remove("is-danger")
+            btn_edit.classList.remove("is-warning")
+        }
+    }
+
+    function deletebutton(){ 
+        for(let i=0;i<checkbox.length;i++){
+            if(checkbox[i].checked){
+                document.getElementById(checkbox[i].value).click()
+            }
+        }
+    }
+    function editbutton(){ 
+        for(let i=0;i<checkbox.length;i++){
+            if(checkbox[i].checked){
+                document.getElementsByName(checkbox[i].value)[0].click()
+            }
+        }
+    }
+    
     elements = document.getElementsByTagName("li");
     var parameter = location.search
     var splitparam = parameter.split('&')
     var paramArray = splitparam[0]
     
-    var prevbtn = document.getElementById("prev")
-    var nextbtn2 = document.querySelectorAll("#next")
     
-    if(<%=@pagenation%> <= 1){
-        prevbtn.setAttribute("disabled", true);
-	    prevbtn.style.color = "White";
-	}
-    if(<%=@pagenation%> > <%=@pagenumber%>){
-        nextbtn2[0].setAttribute("disabled", true);
-		nextbtn2[0].style.color = "White";
-        nextbtn2[1].setAttribute("disabled", true);
-		nextbtn2[1].style.color = "White";
-        nextbtn2[2].setAttribute("disabled", true);
-		nextbtn2[2].style.color = "White";
-    }
+    
     if(splitparam.length == 1){
         elements[0].className = "is-active"
     }else{

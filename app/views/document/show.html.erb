@@ -1,13 +1,40 @@
 <section class="hero is-success">
     <div class="hero-body">
         <p class="title">
-            資料閲覧ページ
+            資料閲覧
         </p>
     </div>
 </section>
 
-<h1><%=@document.title%></h1>
-<%=markdown(@document.content)%>
-<p><%=@document.difficulty%></p>
+<section class="container" style="margin-top:5%;">
+    <h1 class="title"><%=@document.title%></h1>
+    <p class="subtitle">重要度:<%=@document.difficulty%></p>
+    <div class="parent">
+        <button class="item button" id="item2"><%= link_to '編集' ,edit_document_path(content:params[:content]) %></button>
+        <%= button_to document_path(@document.id,content:params[:content]),class:"item button is-danger", method: :delete ,form:{data: {turbo_confirm:"削除しますか?"}} do%>
+            <ion-icon name="trash-outline">
+        <%end%>
+    </div>
+    <div class="card">
+        <div class="card-content">
+            <div class="content">
+                <%=markdown(@document.content)%>
+            </div>
+        </div>
+    </div>
+    <%= link_to "資料一覧へ",document_index_path(content:params[:content],pagenation:1)%>
+</section>
 
-<%= link_to "戻る",document_index_path(content:params[:content],pagenation:1)%>
+<style>
+.item{
+    margin-left:10px;
+    margin-top:auto;
+}
+.parent{
+    display: flex;
+    flex-wrap: wrap;
+    align-items:center
+    width: 600px;
+}
+
+</style>

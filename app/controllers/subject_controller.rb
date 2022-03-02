@@ -1,7 +1,14 @@
 class SubjectController < ApplicationController
   before_action:authenticate_user!
+
+  
   def index
+    
     @parameter = params[:group]
+    if @parameter == ""
+      @parameter = "all"
+    end
+
     @page_param = params[:pagenation]
     if @parameter == "is"
       @subject = Subject.where(username:current_user.name).and(Subject.where(test:0))
@@ -21,28 +28,44 @@ class SubjectController < ApplicationController
     elsif @pagenation <= 0
       @pagenation = 1
     end
-
-  
   end
   
-  def show
-    @subject = Subject.find(params[:id])
-  end
 
   def new
-    @subjects = Subject.new
+    @subject = Subject.new
+  
   end
   
   def create
     @subject = Subject.create(subject_params)
-    redirect_to document_new_path(content:@subject.subjectname),notice:"作成しました."
+    if @subject.save!
+      redirect_to document_new_path(content:@subject.subjectname),notice:"作成しました."
+    else
+      render :new
+    end
   end
 
   def edit
-
+    @subject = Subject.find(params[:id])
+    
   end
 
   def update
+    subject = Subject.find(params[:id])
+    if subject.update(subject_params)
+      redirect_to root_path ,notice:"更新しました"
+    else
+      render action: :edit ,notice:"変更に誤りがあります。"
+    end
+
+  end
+
+  def destroy
+    subject = Subject.find(params[:id])
+    Document.where(username:subject.username).and(Document.where(subjectname:subject.subjectname)).destroy_all
+    subject.destroy
+    redirect_to root_path
+    
 
   end
 
