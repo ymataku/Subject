@@ -46,9 +46,6 @@
           <div class="navbar-item">
             <div class="field is-grouped">
               <p class="control">
-                <%= link_to "マイページ", user_path(id:current_user), class: "button is-warning is-light" %>
-              </p>
-              <p class="control">
                 <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "button is-warning is-light" %>
               </p>
             </div>

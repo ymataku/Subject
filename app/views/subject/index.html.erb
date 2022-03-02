@@ -16,19 +16,20 @@
             </div>
             <div class="parent">
                 <button class="item button" id="item2"><%= link_to '作成' ,new_subject_path %></button>
-                <button class="item button" id="item2" onclick="editbutton()">編集</button>
+                <button class="item button" id="edit" onclick="editbutton()">編集</button>
                 <button class="item button" id="delete" onclick="deletebutton()"><ion-icon name="trash-outline"></ion-icon></button>
                 
             </div>
             <% @subject.slice((@pagenation-1)*12..@pagenation*12).each do |s|%>
                 <div class="panel-block">
-                    <input type="checkbox"  value= "<%=s.id%>" name="options" onclick="check_search()">
+                
+                    <input type="checkbox"  id="id#{s.id}" value= "<%=s.id%>" name="options" onclick="check_search()">
                     <span class="panel-icon">
                         <ion-icon name="folder-open-outline"></ion-icon>
                     </span>
                     <%= link_to s.subjectname,:controller => 'document', :action => 'index', content: s.subjectname,pagenation:1%>
                     <div style="display:none;">
-                        <%= button_to "削除",subject_path(id:s.id),{method: :delete,id:s.id} %>
+                        <%= button_to "削除",subject_path(id:s.id),{method: :delete,id:s.id,form:{data: {turbo_confirm:"削除しますか?"}}}%>
                         <%= button_to "編集","/subject/#{s.id}/edit",{method: :get,name:s.id}%>
                     </div>
                 </div>
@@ -52,7 +53,9 @@
 
 <script>
     var checkbox = document.getElementsByName("options")
-    var btn =   document.getElementById("delete")
+    var btn_delete =   document.getElementById("delete")
+    var btn_edit = document.getElementById("edit")
+    
     function check_search(){
         var check_item = 0
         for(let i=0;i<checkbox.length;i++){
@@ -61,11 +64,15 @@
             }
         }
         if(check_item == 1){
-            btn.classList.add("is-danger")
+            btn_delete.classList.add("is-danger")
+            btn_edit.classList.add("is-warning")
+
         }else{
-            btn.classList.remove("is-danger")
+            btn_delete.classList.remove("is-danger")
+            btn_edit.classList.remove("is-warning")
         }
     }
+
     function deletebutton(){ 
         for(let i=0;i<checkbox.length;i++){
             if(checkbox[i].checked){

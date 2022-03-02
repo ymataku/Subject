@@ -11,7 +11,9 @@
     <p class="subtitle">重要度:<%=@document.difficulty%></p>
     <div class="parent">
         <button class="item button" id="item2"><%= link_to '編集' ,edit_document_path(content:params[:content]) %></button>
-        <button class="item button" id="item"><ion-icon name="trash-outline"></ion-icon></button>
+        <%= button_to document_path(@document.id,content:params[:content]),class:"item button is-danger", method: :delete ,form:{data: {turbo_confirm:"削除しますか?"}} do%>
+            <ion-icon name="trash-outline">
+        <%end%>
     </div>
     <div class="card">
         <div class="card-content">

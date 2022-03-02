@@ -29,7 +29,7 @@
                     </span>
                     <%= link_to d.title,document_path(d.id,content:params[:content])%>
                     <div style="display:none;">
-                        <%= button_to "削除",document_path(id:d.id,content:params[:content],pagenation:params[:pagenation]),{method: :delete,id:d.id} %>
+                        <%= button_to "削除",document_path(id:d.id,content:params[:content],pagenation:params[:pagenation]),{method: :delete,id:d.id ,form:{data: {turbo_confirm:"削除しますか?"}}}%>
                         <%= link_to "更新",edit_document_path(d.id,content:params[:content],pagenation:params[:pagenation])%>
                     </div>
                 </div>

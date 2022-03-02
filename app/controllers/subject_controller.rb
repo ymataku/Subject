@@ -65,6 +65,7 @@ class SubjectController < ApplicationController
     Document.where(username:subject.username).and(Document.where(subjectname:subject.subjectname)).destroy_all
     subject.destroy
     redirect_to root_path
+    
 
   end
 

@@ -38,6 +38,11 @@ class DocumentController < ApplicationController
 
   def create
     document = Document.create(document_params)
+    if document.title == ""
+      document.title = "no title"
+    end
+
+    
     if document.save
       redirect_to document_path(document,content:params[:content]),notice:"作成しました."
     else
