@@ -54,7 +54,8 @@ gem 'redcarpet'
 gem  'jquery-rails'
 gem 'jquery-turbolinks'
 
-
+gem 'mysql2'
+gem 'dotenv-rails'
 
 # Use Sass to process CSS
 #gem "sassc-rails"
