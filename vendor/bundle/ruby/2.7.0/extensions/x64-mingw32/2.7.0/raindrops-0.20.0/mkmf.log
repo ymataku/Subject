@@ -1,0 +1,72 @@
+have_func: checking for mmap() in sys/mman.h... -------------------- no
+
+"gcc -o conftest.exe -IC:/Ruby27-x64/include/ruby-2.7.0/x64-mingw32 -IC:/Ruby27-x64/include/ruby-2.7.0/ruby/backward -IC:/Ruby27-x64/include/ruby-2.7.0 -I. -D__USE_MINGW_ANSI_STDIO=1 -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -O3 -fno-fast-math -fstack-protector-strong conftest.c  -L. -LC:/Ruby27-x64/lib -L. -pipe -s -fstack-protector-strong  -m64   -lx64-msvcrt-ruby270  -lshell32 -lws2_32 -liphlpapi -limagehlp -lshlwapi  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: int main(int argc, char **argv)
+6: {
+7:   return !!argv[argc];
+8: }
+/* end */
+
+"gcc -o conftest.exe -IC:/Ruby27-x64/include/ruby-2.7.0/x64-mingw32 -IC:/Ruby27-x64/include/ruby-2.7.0/ruby/backward -IC:/Ruby27-x64/include/ruby-2.7.0 -I. -D__USE_MINGW_ANSI_STDIO=1 -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -O3 -fno-fast-math -fstack-protector-strong conftest.c  -L. -LC:/Ruby27-x64/lib -L. -pipe -s -fstack-protector-strong  -m64   -lx64-msvcrt-ruby270  -lshell32 -lws2_32 -liphlpapi -limagehlp -lshlwapi  "
+conftest.c:5:10: fatal error: sys/mman.h: No such file or directory
+    5 | #include <sys/mman.h>
+      |          ^~~~~~~~~~~~
+compilation terminated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <winsock2.h>
+ 4: #include <windows.h>
+ 5: #include <sys/mman.h>
+ 6: 
+ 7: /*top*/
+ 8: extern int t(void);
+ 9: int main(int argc, char **argv)
+10: {
+11:   if (argc > 1000000) {
+12:     int (* volatile tp)(void)=(int (*)(void))&t;
+13:     printf("%d", (*tp)());
+14:   }
+15: 
+16:   return !!argv[argc];
+17: }
+18: int t(void) { void ((*volatile p)()); p = (void ((*)()))mmap; return !p; }
+/* end */
+
+"gcc -o conftest.exe -IC:/Ruby27-x64/include/ruby-2.7.0/x64-mingw32 -IC:/Ruby27-x64/include/ruby-2.7.0/ruby/backward -IC:/Ruby27-x64/include/ruby-2.7.0 -I. -D__USE_MINGW_ANSI_STDIO=1 -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -O3 -fno-fast-math -fstack-protector-strong conftest.c  -L. -LC:/Ruby27-x64/lib -L. -pipe -s -fstack-protector-strong  -m64   -lx64-msvcrt-ruby270  -lshell32 -lws2_32 -liphlpapi -limagehlp -lshlwapi  "
+conftest.c:5:10: fatal error: sys/mman.h: No such file or directory
+    5 | #include <sys/mman.h>
+      |          ^~~~~~~~~~~~
+compilation terminated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <winsock2.h>
+ 4: #include <windows.h>
+ 5: #include <sys/mman.h>
+ 6: 
+ 7: /*top*/
+ 8: extern int t(void);
+ 9: int main(int argc, char **argv)
+10: {
+11:   if (argc > 1000000) {
+12:     int (* volatile tp)(void)=(int (*)(void))&t;
+13:     printf("%d", (*tp)());
+14:   }
+15: 
+16:   return !!argv[argc];
+17: }
+18: extern void mmap();
+19: int t(void) { mmap(); return 0; }
+/* end */
+
+--------------------
+

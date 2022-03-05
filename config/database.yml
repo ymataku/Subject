@@ -22,4 +22,7 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  username: admin
+  database: subjectdocument
+  password: password
+  socket: /var/lib/mysql/mysql.sock
