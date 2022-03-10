@@ -59,7 +59,7 @@ gem 'kgio','2.11.4'
 
 gem 'unicorn','5.4.1'
 
-gem 'mysql2'
+gem 'mysql2','0.5.3'
 
 gem 'dotenv-rails'
 
