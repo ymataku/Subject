@@ -1,5 +1,5 @@
 current directory: C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/kgio-2.11.4/ext/kgio
-C:/Ruby27-x64/bin/ruby.exe -I C:/Ruby27-x64/lib/ruby/2.7.0 -r ./siteconf20220306-29768-1mvm7q3.rb extconf.rb
+C:/Ruby27-x64/bin/ruby.exe -I C:/Ruby27-x64/lib/ruby/2.7.0 -r ./siteconf20220310-45792-1x86law.rb extconf.rb
 checking for CLOCK_MONOTONIC in time.h... yes
 checking for clockid_t in time.h... yes
 checking for clock_gettime() in -lrt... no
