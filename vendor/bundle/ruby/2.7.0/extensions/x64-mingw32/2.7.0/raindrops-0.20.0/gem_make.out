@@ -1,5 +1,5 @@
 current directory: C:/Users/user/railsfolder/vendor/bundle/ruby/2.7.0/gems/raindrops-0.20.0/ext/raindrops
-C:/Ruby27-x64/bin/ruby.exe -I C:/Ruby27-x64/lib/ruby/2.7.0 -r ./siteconf20220310-45792-1mbykvr.rb extconf.rb
+C:/Ruby27-x64/bin/ruby.exe -I C:/Ruby27-x64/lib/ruby/2.7.0 -r ./siteconf20220310-19484-d6bdqo.rb extconf.rb
 checking for mmap() in sys/mman.h... no
 mmap() not found
 *** extconf.rb failed ***

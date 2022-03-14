@@ -53,11 +53,9 @@ gem 'redcarpet'
 
 gem  'jquery-rails'
 gem 'jquery-turbolinks'
-gem 'raindrops','0.20.0'
 
-gem 'kgio','2.11.4'
 
-gem 'mysql2','0.5.3'
+
 gem 'unicorn','5.4.1'
 
 
