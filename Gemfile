@@ -54,7 +54,7 @@ gem 'redcarpet'
 gem  'jquery-rails'
 gem 'jquery-turbolinks'
 
-
+gem 'mysql2', '0.5.3'
 
 gem 'unicorn','5.4.1'
 
