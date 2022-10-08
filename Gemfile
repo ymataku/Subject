@@ -47,6 +47,7 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 
 gem 'devise'
+
 gem "bulma-rails"
 
 gem 'redcarpet'
@@ -55,9 +56,13 @@ gem  'jquery-rails'
 
 gem 'jquery-turbolinks'
 
-gem 'mysql2', '0.5.3'
 
-gem 'unicorn','5.4.1'
+
+gem 'sqlite3'
+
+#この二つはwindowsでは行わない
+# gem 'unicorn','5.4.1'
+# gem 'mysql2', '0.5.3'
 
 gem 'dotenv-rails'
 

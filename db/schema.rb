@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecorurd::Schema.define(version: 2022_02_26_174120) do
+ActiveRecord::Schema.define(version: 2022_02_26_174120) do
 
   create_table "documents", force: :cascade do |t|
     t.string "subjectname", null: false
