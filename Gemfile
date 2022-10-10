@@ -56,21 +56,14 @@ gem  'jquery-rails'
 
 gem 'jquery-turbolinks'
 
-
-
-gem 'sqlite3'
-
-#この二つはwindowsでは行わない
-# gem 'unicorn','5.4.1'
-# gem 'mysql2', '0.5.3'
-
 gem 'dotenv-rails'
+
+gem "sassc-rails"
 
 # Use Sass to process CSS
 #gem "sassc-rails"
 
 #gem 'rails_admin', '~> 2.0.0.beta'
-
 
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
@@ -85,6 +78,7 @@ group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
 
+  gem 'sqlite3'
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
 
@@ -98,4 +92,11 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
-gem "sassc-rails"
+
+group :production do
+  #この二つはwindowsでは行わない
+  gem 'unicorn','5.4.1'
+  gem 'mysql2', '0.5.3'
+end
+
+
