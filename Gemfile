@@ -60,6 +60,8 @@ gem 'dotenv-rails'
 
 gem "sassc-rails"
 
+gem 'rubocop', '~> 1.36', require: false
+
 # Use Sass to process CSS
 #gem "sassc-rails"
 
@@ -95,8 +97,8 @@ end
 
 group :production do
   #この二つはwindowsでは行わない
-  gem 'unicorn','5.4.1'
-  gem 'mysql2', '0.5.3'
+  # gem 'unicorn','5.4.1'
+  # gem 'mysql2', '0.5.3'
 end
 
 
