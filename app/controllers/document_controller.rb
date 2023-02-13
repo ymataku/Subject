@@ -2,30 +2,35 @@ class DocumentController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    parameter = params[:group]
+    @nav = params[:group]
     @pagenation = params[:pagenation].to_i
     @parameter = params[:content]
-    @params = parameter
-
-    if parameter == 'difficult'
-      @document = Document.where(username: current_user.name).and(Document.where(subjectname: params[:content]).and(Document.where(difficulty: 5).or(Document.where(difficulty: 4))))
-    elsif parameter == 'medium'
-      @document = Document.where(username: current_user.name).and(Document.where(subjectname: params[:content]).and(Document.where(difficulty: 3)))
-    elsif parameter == 'easy'
-      @document = Document.where(username: current_user.name).and(Document.where(subjectname: params[:content]).and(Document.where(difficulty: 2).or(Document.where(difficulty: 1))))
-    elsif parameter == 'all'
-      @document = Document.where(username: current_user.name).and(Document.where(subjectname: params[:content]))
-    else
-      @document = Document.where(username: current_user.name).and(Document.where(subjectname: params[:content]))
-    end
+    puts @nav
+    user_name = Document.where(username: current_user.name)
+    subject_name = Document.where(subjectname: params[:content])
+    difficulty_level = Document.where(difficulty: 5).or(Document.where(difficulty: 4))
+    middle_level = Document.where(difficulty: 3)
+    easy_level = Document.where(difficulty: 2).or(Document.where(difficulty: 1))
+    
+    @document = if @nav == 'difficult'
+                  user_name.and(subject_name.and(difficulty_level))
+                elsif @nav == 'medium'
+                  user_name.and(subject_name.and(middle_level))
+                elsif @nav == 'easy'
+                  user_name.and(subject_name.and(easy_level))
+                elsif @nav == 'all'
+                  user_name.and(subject_name)
+                else
+                  user_name.and(subject_name)
+                end
+    puts "this is @document"
+    puts @document[0]
     if @document.count < (@pagenation - 1) * 12
       @pagenation -= 1
-
     elsif @pagenation <= 0
       @pagenation = 1
     end
-
-    print(@document.to_json)
+   
   end
 
   def show

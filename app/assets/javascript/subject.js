@@ -1,7 +1,7 @@
 var checkbox = document.getElementsByName("options")
 var btn_delete =   document.getElementById("delete")
 var btn_edit = document.getElementById("edit")
-
+alert('stop')
 function check_search(){
     var check_item = 0
     for(let i=0;i<checkbox.length;i++){
