@@ -5,7 +5,7 @@ class DocumentController < ApplicationController
     @nav = params[:group]
     @pagenation = params[:pagenation].to_i
     @parameter = params[:content]
-    puts @nav
+    
     user_name = Document.where(username: current_user.name)
     subject_name = Document.where(subjectname: params[:content])
     difficulty_level = Document.where(difficulty: 5).or(Document.where(difficulty: 4))
@@ -23,14 +23,20 @@ class DocumentController < ApplicationController
                 else
                   user_name.and(subject_name)
                 end
-    puts "this is @document"
-    puts @document[0]
+    
     if @document.count < (@pagenation - 1) * 12
       @pagenation -= 1
     elsif @pagenation <= 0
       @pagenation = 1
     end
    
+  end
+
+  def index_api
+    user_name = Document.where(username: current_user.name)
+    subject_name = Document.where(subjectname: params[:content])
+    @test = user_name.and(subject_name)
+    render json:@test
   end
 
   def show
@@ -53,9 +59,14 @@ class DocumentController < ApplicationController
   end
 
   def destroy
-    document = Document.where(id: params[:id])
+    document = Document.where(id:params[:id])
     document.destroy_all
     redirect_to document_index_path(content: params[:content], pagenation: params[:pagenation])
+  end
+
+  def destroy_api
+    document = Document.find(params[:id])
+    document.destroy
   end
 
   def edit

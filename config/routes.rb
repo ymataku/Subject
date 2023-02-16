@@ -22,9 +22,16 @@ Rails.application.routes.draw do
   # root "articles#index"
   resources:subject
   
-  resources:document 
+  resources:document, except: [:index_api,:destroy_api]
+
+  get 'document/api/index' => 'document#index_api'
+  delete 'document/delete/:id' => 'document#destroy_api'
+
+  
   
   post "document/new" => "document#create"
+
+
 
   root to: "subject#index"
 end

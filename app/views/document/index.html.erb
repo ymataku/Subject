@@ -18,7 +18,6 @@
         <div class="parent">
             <button class="item button" id="item2" onclick="DeleteDoc()"><%= link_to '作成' ,new_document_path(content:params[:content]) %></button>
             <button class="item button" id="item" onclick="DeleteDoc()"><ion-icon name="trash-outline"></ion-icon></button>
-        
         </div>
         <article class="panel is-primary">
             <% @document.slice((@pagenation-1)*12...@pagenation*12).each do |d|%>
@@ -51,6 +50,23 @@
         </div>
     </footer>
 </section>
+
+
+<div id='app'>
+    <div class="parent">
+        <button class="item button" id="item2"><%= link_to '作成' ,new_document_path(content:params[:content]) %></button>
+        <button class="item button" ref="trash" @click="TrashOn()"><ion-icon name="trash-outline"></ion-icon></button>
+    </div>
+    <div v-for='item in message' class="panel-block" ref="itemlist">
+        <label>
+            <input type="checkbox" name="options" v-model="item.checked" ref='checkbox' @click="TrashActive($event,item)" :value='item.title' :id="item.id">
+            <span class="panel-icon">
+                <ion-icon name="bookmark-outline"></ion-icon>
+            </span>
+                <a :href=item.id>{{ item.title }}</a>
+        </label>
+    </div>
+</div>
 
 <style>
 .item{
