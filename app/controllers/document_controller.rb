@@ -8,21 +8,21 @@ class DocumentController < ApplicationController
     
     user_name = Document.where(username: current_user.name)
     subject_name = Document.where(subjectname: params[:content])
-    difficulty_level = Document.where(difficulty: 5).or(Document.where(difficulty: 4))
-    middle_level = Document.where(difficulty: 3)
-    easy_level = Document.where(difficulty: 2).or(Document.where(difficulty: 1))
-    
-    @document = if @nav == 'difficult'
-                  user_name.and(subject_name.and(difficulty_level))
-                elsif @nav == 'medium'
-                  user_name.and(subject_name.and(middle_level))
-                elsif @nav == 'easy'
-                  user_name.and(subject_name.and(easy_level))
-                elsif @nav == 'all'
-                  user_name.and(subject_name)
-                else
-                  user_name.and(subject_name)
-                end
+    # difficulty_level = Document.where(difficulty: 5).or(Document.where(difficulty: 4))
+    # middle_level = Document.where(difficulty: 3)
+    # easy_level = Document.where(difficulty: 2).or(Document.where(difficulty: 1))
+    @document =  user_name.and(subject_name)
+    # @document = if @nav == 'difficult'
+    #               user_name.and(subject_name.and(difficulty_level))
+    #             elsif @nav == 'medium'
+    #               user_name.and(subject_name.and(middle_level))
+    #             elsif @nav == 'easy'
+    #               user_name.and(subject_name.and(easy_level))
+    #             elsif @nav == 'all'
+    #               user_name.and(subject_name)
+    #             else
+    #               user_name.and(subject_name)
+    #             end
     
     if @document.count < (@pagenation - 1) * 12
       @pagenation -= 1
@@ -50,7 +50,7 @@ class DocumentController < ApplicationController
   def create
     document = Document.create(document_params)
     document.title = 'no title' if document.title == ''
-
+    
     if document.save
       redirect_to document_path(document, content: params[:content]), notice: '作成しました.'
     else

@@ -15,25 +15,23 @@
                 <li id="easy" name="nav"><%=link_to "そんなに",document_index_path(content:params[:content],group:"easy",pagenation:1)%></li>
             </ul>
         </div>
-        <div class="parent">
-            <button class="item button" id="item2" onclick="DeleteDoc()"><%= link_to '作成' ,new_document_path(content:params[:content]) %></button>
-            <button class="item button" id="item" onclick="DeleteDoc()"><ion-icon name="trash-outline"></ion-icon></button>
-        </div>
-        <article class="panel is-primary">
-            <% @document.slice((@pagenation-1)*12...@pagenation*12).each do |d|%>
-                <div class="panel-block">
-                    <input type="checkbox" value= "<%=d.id%>" name="options" onclick="DeleteBtnActive()">
-                    <span class="panel-icon">
-                        <ion-icon name="bookmark-outline"></ion-icon>
-                    </span>
-                    <%= link_to d.title,document_path(d.id,content:params[:content])%>
-                    <div style="display:none;">
-                        <%= button_to "削除",document_path(id:d.id,content:params[:content],pagenation:params[:pagenation]),{method: :delete,id:d.id ,form:{data: {turbo_confirm:"削除しますか?"}}}%>
-                        <%= link_to "更新",edit_document_path(d.id,content:params[:content],pagenation:params[:pagenation])%>
-                    </div>
+        <div id='app'>
+            <div class="parent">
+                <button class="item button" id="item2"><%= link_to '作成' ,new_document_path(content:params[:content]) %></button>
+                <button class="item button" ref="trash" @click="TrashOn()"><ion-icon name="trash-outline"></ion-icon></button>
+            </div>
+            <article class="panel is-primary">
+                <div v-for='item in message' class="panel-block" ref="itemlist">
+                    <label>
+                        input type="checkbox" name="options" v-model="item.checked" ref='checkbox' @click="TrashActive($event,item)" :value='item.title' :id="item.id">
+                        <span class="panel-icon">
+                            <ion-icon name="bookmark-outline"></ion-icon>
+                        </span>
+                            <a :href=item.id>{{ item.title }}</a>
+                    </label>
                 </div>
-            <%end%>
-        </article>
+            </article>
+        </div>
     </div>
     
     <footer class="footer">
@@ -52,21 +50,7 @@
 </section>
 
 
-<div id='app'>
-    <div class="parent">
-        <button class="item button" id="item2"><%= link_to '作成' ,new_document_path(content:params[:content]) %></button>
-        <button class="item button" ref="trash" @click="TrashOn()"><ion-icon name="trash-outline"></ion-icon></button>
-    </div>
-    <div v-for='item in message' class="panel-block" ref="itemlist">
-        <label>
-            <input type="checkbox" name="options" v-model="item.checked" ref='checkbox' @click="TrashActive($event,item)" :value='item.title' :id="item.id">
-            <span class="panel-icon">
-                <ion-icon name="bookmark-outline"></ion-icon>
-            </span>
-                <a :href=item.id>{{ item.title }}</a>
-        </label>
-    </div>
-</div>
+
 
 <style>
 .item{

@@ -62,6 +62,8 @@ gem "sassc-rails"
 
 gem 'rubocop', '~> 1.36', require: false
 
+gem 'minitest','~> 5.10.1'
+
 # Use Sass to process CSS
 #gem "sassc-rails"
 
