@@ -42,7 +42,7 @@ new Vue({
         GetData(){
             axios.get('/document/api/index',{
                 params:{
-                    content:'test'
+                    content:'TestSubject'
                 }
             })
             .then(res=>{
@@ -88,11 +88,11 @@ new Vue({
              }
             }
             this.DeleteData(id)
-            // this.$refs.checkbox.forEach(v=>{
-            //     if(!v.checked) return
-                
-            // })  
         },
+        ClickNav(e){
+            let id = e.currentTarget.getAttribute('id')
+            console.log(id)
+        }
        
     },
     mounted(){
