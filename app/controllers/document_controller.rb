@@ -50,6 +50,16 @@ class DocumentController < ApplicationController
   def create
     document = Document.create(document_params)
     document.title = 'no title' if document.title == ''
+    document.difficulty = case document.difficulty
+                          when '1','2'
+                            'easy'
+                          when '3'
+                            'medium'
+                          when '4','5'
+                            'difficult'
+                          else
+                            'all'
+                          end
     
     if document.save
       redirect_to document_path(document, content: params[:content]), notice: '作成しました.'

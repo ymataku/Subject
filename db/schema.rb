@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2022_02_26_174120) do
     t.string "subjectname", null: false
     t.string "title", null: false
     t.text "content"
-    t.integer "difficulty"
+    t.string "difficulty"
     t.string "username", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
