@@ -36,7 +36,8 @@ new Vue({
     el:"#app",
     data:{
         message:[],
-        param:''
+        param:'',
+        menu_type:'medium',
     },
     methods:{
         GetData(){
@@ -89,9 +90,8 @@ new Vue({
             }
             this.DeleteData(id)
         },
-        ClickNav(e){
-            let id = e.currentTarget.getAttribute('id')
-            console.log(id)
+        ClickNav(event){
+            this.menu_type =  event.currentTarget.getAttribute('id')
         }
        
     },

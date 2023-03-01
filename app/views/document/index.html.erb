@@ -10,9 +10,9 @@
         <div class="container" style="margin-top:5%;">
             <div class="tabs">
                 <ul>
-                    <a id="all" @click="ClickNav(e)" style="color:#1e90ff;" >全て</a>
-                    <a id="diff" @click="ClickNav(e)" style="color:#1e90ff;">重要</a>
-                    <a id="medium" @click="ClickNav(e)" style="color:#1e90ff;">普通</a>
+                    <a id="all" @click="ClickNav($event)" style="color:#1e90ff;" >全て</a>
+                    <a id="diff" @click="ClickNav($event)" style="color:#1e90ff;">重要</a>
+                    <a id="medium" @click="ClickNav($event)" style="color:#1e90ff;">普通</a>
                 </ul>
             </div>
             
@@ -22,7 +22,7 @@
             </div>
             <article class="panel is-primary">
                 <div v-for='item in message' class="panel-block" ref="itemlist">
-                    <label>
+                    <label v-if="menu_type == item.difficulty">
                         <input type="checkbox" name="options" v-model="item.checked" ref='checkbox' @click="TrashActive($event,item)" :value='item.title' :id="item.id">
                         <span class="panel-icon">
                             <ion-icon name="bookmark-outline"></ion-icon>
