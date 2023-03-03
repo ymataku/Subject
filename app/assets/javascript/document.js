@@ -36,14 +36,14 @@ new Vue({
     el:"#app",
     data:{
         message:[],
-        param:'',
+        title:'TestSubject',
         menu_type:'medium',
     },
     methods:{
         GetData(){
             axios.get('/document/api/index',{
                 params:{
-                    content:'TestSubject'
+                    content:this.title
                 }
             })
             .then(res=>{
@@ -55,7 +55,7 @@ new Vue({
         DeleteData(id){
         
             const params={
-                content:'test',
+                content:this.title,
                 pagenation:0
             }
             axios.delete('/document/delete/'+id,{
