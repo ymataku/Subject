@@ -37,7 +37,7 @@ new Vue({
     data:{
         message:[],
         title:'TestSubject',
-        menu_type:'medium',
+        menu_type:'all',
     },
     methods:{
         GetData(){

@@ -18,13 +18,26 @@
             </div>
             
             <div class="parent">
-                <button class="item button" id="item2"><%= link_to '作成' ,new_document_path(content:params[:content]) %></button>
+                <button class="item button"><%= link_to '作成' ,new_document_path(content:params[:content]) %></button>
                 <button class="item button" ref="trash" @click="TrashOn()"><ion-icon name="trash-outline"></ion-icon></button>
             </div>
-            <article class="panel is-primary">
+
+            <article class="panel is-primary" v-if="menu_type == 'all'" style="padding:5px;">
+                <div v-for='item in message' class="subject">
+                    <label>
+                        <input type="checkbox" name="options" v-model="item.checked" ref='checkbox' @click="TrashActive($event,item)" :value='item.title' :id="item.id">
+                        <span class="panel-icon">
+                            <ion-icon name="bookmark-outline"></ion-icon>
+                        </span>
+                            <a :href=item.id+'?content='+title>{{ item.title }}</a>
+                    </label>
+                </div>
+            </article>
+           
+            <article v-else class="panel is-primary">
                 <div v-for='item in message'>
-                    <div v-if="menu_type == item.difficulty" class="panel-block" ref="itemlist"> 
-                        <label>
+                    <div class="panel-block" v-if="menu_type == item.difficulty"  ref="itemlist"> 
+                        <label style="margin:10px;">
                             <input type="checkbox" name="options" v-model="item.checked" ref='checkbox' @click="TrashActive($event,item)" :value='item.title' :id="item.id">
                             <span class="panel-icon">
                                 <ion-icon name="bookmark-outline"></ion-icon>
@@ -34,7 +47,7 @@
                     </div>
                 </div>
             </article>
-        
+          
         </div>
     </div>
     
@@ -65,6 +78,9 @@
     align-items:center
     width: 600px;
     margin-bottom:10px;
+}
+.subject{
+    margin:20px 10px 20px 10px;
 }
 
 </style>

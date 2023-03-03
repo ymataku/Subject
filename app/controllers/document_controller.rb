@@ -1,8 +1,8 @@
 class DocumentController < ApplicationController
   before_action :authenticate_user!
-  include StringCheck
+  # include StringCheck
   def index
-    @nav = params[:group]
+    # @nav = params[:group]
     @pagenation = params[:pagenation].to_i
     @parameter = params[:content]
     
@@ -34,11 +34,8 @@ class DocumentController < ApplicationController
   end
 
   def create
-    doc = string_check_test(params.require(:document))
-    document = Document.create(doc)
-    # document = Document.create(document_params)
-    # string_check(document)
-    
+    modified_params = params_modify(params.require(:document))
+    document = Document.create(modified_params)
     if document.save
       redirect_to document_path(document, content: params[:content]), notice: '作成しました.'
     else
@@ -62,11 +59,9 @@ class DocumentController < ApplicationController
   end
 
   def update
+    modified_params = params_modify(params.require(:document))
     document = Document.find(params[:id])
-    test = string_check_test(params.require(:document))
-    
-    
-    if document.update(test)
+    if document.update(modified_params)
       redirect_to document_path(document, content: params[:content]), notice: '更新しました。'
     else
       render :edit
@@ -75,11 +70,16 @@ class DocumentController < ApplicationController
 
   private
 
-  def document_params
-    params.require(:document).permit(:username, :subjectname, :title, :content, :difficulty)
-  end
+  # def document_params
+  #   params.require(:document).permit(:username, :subjectname, :title, :content, :difficulty)
+  # end
 
-  def string_check_test(params)
+  def params_modify(params)
+    if params == nil
+      p 'params is nil'
+      return
+    end
+
     params[:title] = 'no title' if params[:title] == ''
     params[:difficulty] = case params[:difficulty]
                           when '1','2'
@@ -92,27 +92,6 @@ class DocumentController < ApplicationController
                             'all'
                           end
     return params.permit(:username, :subjectname, :title, :content, :difficulty)
-  end
-
-  def string_check(document)
-
-    if document.class == nil
-      p 'document is nil'
-      return 
-    end 
-    p 'this is document'
-    p document
-    document.title = 'no title' if document.title == ''
-    document.difficulty = case document.difficulty
-                          when '1','2'
-                            'easy'
-                          when '3'
-                            'medium'
-                          when '4','5'
-                            'difficult'
-                          else
-                            'all'
-                          end
   end
 
 end
