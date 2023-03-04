@@ -1,28 +1,10 @@
 class DocumentController < ApplicationController
   before_action :authenticate_user!
-  # include StringCheck
-  def index
-    # @nav = params[:group]
-    @pagenation = params[:pagenation].to_i
-    @parameter = params[:content]
-    
-    user_name = Document.where(username: current_user.name)
-    subject_name = Document.where(subjectname: params[:content])
-    @document =  user_name.and(subject_name)
-
-    if @document.count < (@pagenation - 1) * 12
-      @pagenation -= 1
-    elsif @pagenation <= 0
-      @pagenation = 1
-    end
-   
-  end
-
+  
   def index_api
     user_name = Document.where(username: current_user.name)
     subject_name = Document.where(subjectname: params[:content])
-    @test = user_name.and(subject_name)
-    render json:@test
+    render json:user_name.and(subject_name)
   end
 
   def show
@@ -69,10 +51,6 @@ class DocumentController < ApplicationController
   end
 
   private
-
-  # def document_params
-  #   params.require(:document).permit(:username, :subjectname, :title, :content, :difficulty)
-  # end
 
   def params_modify(params)
     if params == nil
